@@ -4,6 +4,7 @@
   background-color: #03282f;
   color: #f4f4f4;
   height: 100%;
+  box-shadow: 0px 0px 8px rgba(52, 52, 52, 0.25);
 }
 
 .imageContainer {
@@ -16,6 +17,7 @@
   height: 290px;
   object-fit: cover;
   object-position: center;
+  width: 100%;
 }
 
 .info {

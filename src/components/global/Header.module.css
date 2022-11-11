@@ -1,0 +1,28 @@
+.headerBackground {
+  background-color: #02181D;
+  margin-bottom: 60px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.userNav {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.userNav > p {
+  color: #CCCCCC;
+  font-size: 0.875rem;
+  max-width: 10ch;
+  text-align: left;
+  font-weight: 500;
+}

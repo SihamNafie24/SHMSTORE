@@ -13,7 +13,6 @@ body, h1, h2, h3, h4, p, ul {
 }
 
 img {
-  width: 100%;
   display: block;
 }
 
@@ -23,6 +22,23 @@ a {
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 100px);
+}
+
+.content {
+  flex: 1;
+}
+
+.container {
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.content {
   max-width: 1200px;
   padding: 0px 20px;
   margin: 0 auto;

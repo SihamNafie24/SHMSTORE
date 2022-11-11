@@ -21,7 +21,7 @@ function Produtos() {
       }
     };
 
-    fetchApi('https://fake-server-company.herokuapp.com/products');
+    fetchApi('https://fake-server-company.herokuapp.com/products/list');
   }, []);
 
   if (loading) return <p>carregando ...</p>;
