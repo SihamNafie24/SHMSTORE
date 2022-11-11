@@ -1,0 +1,50 @@
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #03282f;
+  color: #f4f4f4;
+  height: 100%;
+}
+
+.imageContainer {
+  background-color: #FFF;
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
+}
+
+.image {
+  height: 290px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.info {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nome {
+  margin-bottom: 12px;
+}
+
+.nome, .preco {
+  font: 700 1.25rem/1.4 'Satoshi', sans-serif;
+}
+
+.preco {
+  font-size: 1.5rem;
+}
+
+.card del, .card small {
+  font-size: .875rem;
+}
+
+.card del {
+  color: #BEBEBE;
+}
+
+.card small {
+  color: #00FF7A;
+}

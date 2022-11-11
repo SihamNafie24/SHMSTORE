@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Satoshi', sans-serif;
+}
+
+body {
+  background-color: #051418;
+}
+
+body, h1, h2, h3, h4, p, ul {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.App {
+  max-width: 1200px;
+  padding: 0px 20px;
+  margin: 0 auto;
+}
