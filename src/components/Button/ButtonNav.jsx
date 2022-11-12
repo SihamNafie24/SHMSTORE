@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './Button.module.css';
+import styles from './ButtonNav.module.css';
 
-function Button({ text, onClick, ativo }) {
+function ButtonNav({ text, onClick, ativo }) {
   return (
     <button
       className={`${styles.botao} ${ativo === text ? 'ativo' : ''}`}
@@ -12,4 +12,4 @@ function Button({ text, onClick, ativo }) {
   );
 }
 
-export default Button;
+export default ButtonNav;

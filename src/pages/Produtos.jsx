@@ -3,7 +3,8 @@ import React from 'react';
 import styles from './Produtos.module.css';
 import Produto_Card from '../components/Produto_Card';
 import Loading from '../components/Loading';
-import Button from '../components/Button';
+import ButtonNav from '../components/Button/ButtonNav';
+
 
 function Produtos() {
   const [data, setData] = React.useState(null);
@@ -54,10 +55,10 @@ function Produtos() {
   return (
     <section>
       <div className={styles.opcoes}>
-        <Button onClick={handleClick} ativo={ativo} text="console" />
-        <Button onClick={handleClick} ativo={ativo} text="acessorio" />
+        <ButtonNav onClick={handleClick} ativo={ativo} text="console" />
+        <ButtonNav onClick={handleClick} ativo={ativo} text="acessorio" />
         {ativo && (
-          <Button ativo={ativo} onClick={handleClick} text="ver tudo" />
+          <ButtonNav ativo={ativo} onClick={handleClick} text="ver tudo" />
         )}
       </div>
       <div className={`${styles.container} comeFromBottom`}>
