@@ -60,3 +60,12 @@ span, small {
   flex-direction: column;
   gap: 20px;
 }
+
+.cep {
+  width: 100%;
+  background-color: #02181D;
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  gap: 24px;
+}

@@ -3,6 +3,7 @@ import styles from './ProdutoDisplay.module.css';
 import calculateCredit from '../../functions/CalculateCredit';
 import ButtonPrimary from '../Button/ButtonPrimary';
 import ButtonSecondary from '../Button/ButtonSecondary';
+import Input from '../Form/Input';
 
 function ProdutoDisplay({
   name,
@@ -14,6 +15,8 @@ function ProdutoDisplay({
   id,
   seller,
 }) {
+  const [value, setValue] = React.useState('');
+
   const priceTreated = Number(price.replace('R$ ', '')).toFixed(2);
   return (
     <main className={`${styles.container} comeFromBottom`}>
@@ -38,6 +41,15 @@ function ProdutoDisplay({
             <ButtonPrimary text="Comprar" />
             <ButtonSecondary text="Retirar na loja" />
           </div>
+        </div>
+        <div className={styles.cep}>
+          <Input
+            placeholder="Digite seu CEP aqui"
+            id="cep"
+            setValue={setValue}
+            value={value}
+          />
+          <ButtonSecondary text="consultar" />
         </div>
       </div>
     </main>

@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Loading from '../components/Loading';
-import styles from './Produto.module.css';
 import ProdutoDisplay from '../components/Produto/ProdutoDisplay';
 import Head from '../components/global/Head';
 import Wrapper from '../components/Wrapper';
