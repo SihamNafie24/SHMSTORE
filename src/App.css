@@ -1,3 +1,5 @@
+/* Estilos Gerais */
+
 * {
   box-sizing: border-box;
   font-family: 'Satoshi', sans-serif;
@@ -27,10 +29,6 @@ a {
   min-height: calc(100vh + 100px);
 }
 
-.content {
-  flex: 1;
-}
-
 .container {
   max-width: 1200px;
   padding-left: 20px;
@@ -39,7 +37,62 @@ a {
 }
 
 .content {
+  flex: 1;
   max-width: 1200px;
   padding: 0px 20px;
   margin: 0 auto;
+}
+
+/* Animations */
+
+.comeFromLeft {
+  transform: translateX(-40px);
+  opacity: 0;
+  animation: comeFromLeft .3s forwards;
+}
+
+@keyframes comeFromLeft {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}
+
+.comeFromRight {
+  transform: translateX(40px);
+  opacity: 0;
+  animation: comeFromRight .3s forwards;
+}
+
+@keyframes comeFromRight {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}
+
+.comeFromBottom {
+  transform: translateY(40px);
+  opacity: 0;
+  animation: comeFromBottom .3s forwards;
+}
+
+@keyframes comeFromBottom {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}
+
+.comeFromTop {
+  transform: translateY(-40px);
+  opacity: 0;
+  animation: comeFromTop .3s forwards;
+}
+
+@keyframes comeFromTop {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
 }

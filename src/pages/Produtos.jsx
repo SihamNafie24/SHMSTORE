@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import styles from './Produtos.module.css'
 import Produto_Card from '../components/Produto_Card';
+import Loading from '../components/Loading';
 
 function Produtos() {
   const [produtos, setProdutos] = React.useState(null);
@@ -24,11 +25,11 @@ function Produtos() {
     fetchApi('https://fake-server-company.herokuapp.com/products/list');
   }, []);
 
-  if (loading) return <p>carregando ...</p>;
+  if (loading) return <Loading />;
   if (erro) return <p>{erro}</p>;
   if (!produtos) return null
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} comeFromTop`}>
       {produtos.map((produto) => (
         <Produto_Card key={produto.id} {...produto} />
       ))}
