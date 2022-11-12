@@ -1,0 +1,49 @@
+.container {
+  position: relative;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  background-color: #061b21;
+  color: #00ff7a;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 32px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.head img {
+  transition: 0.3s;
+}
+
+.body {
+  background-color: #02181d;
+  padding: 40px 32px 32px 32px;
+  border-radius: 00 0 12px 12px;
+  transform: translateY(-60px);
+  transition: .3s;
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+}
+
+.info {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+:global(.show) {
+  transform: translateY(-8px);
+  opacity: 1;
+}
+
+:global(.rotate) {
+  transform: rotate(180deg);
+}

@@ -1,9 +1,10 @@
 import axios from 'axios';
 import React from 'react';
 import styles from './Produtos.module.css';
-import Produto_Card from '../components/Produto_Card';
+import Produto_Card from '../components/Produto/Produto_Card';
 import Loading from '../components/Loading';
 import ButtonNav from '../components/Button/ButtonNav';
+import Head from '../components/global/Head';
 
 
 function Produtos() {
@@ -54,6 +55,7 @@ function Produtos() {
   if (!produtos) return null;
   return (
     <section>
+      <Head title='Tech Store' />
       <div className={styles.opcoes}>
         <ButtonNav onClick={handleClick} ativo={ativo} text="console" />
         <ButtonNav onClick={handleClick} ativo={ativo} text="acessorio" />

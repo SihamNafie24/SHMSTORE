@@ -1,27 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Produto_Card.module.css';
+import calculateCredit from '../../functions/CalculateCredit';
 
 function Produto_Card({ name, price, image, credit, id }) {
-  const calculateCredit = (price) => {
-    if (!credit)
-      return (
-        <small>
-          <span style={{ fontWeight: 'bold' }}>Á vista</span>
-        </small>
-      );
-
-    const parcels = price > 500 ? 12 : 6;
-    return (
-      <small>
-        <span style={{ fontWeight: 'bold' }}>{parcels}x</span> de{' '}
-        <span style={{ fontWeight: 'bold' }}>
-          {(price / parcels).toFixed(2)}
-        </span>{' '}
-        no cartão
-      </small>
-    );
-  };
 
   const priceTreated = Number(price.replace('R$ ', '')).toFixed(2);
 
@@ -37,7 +19,7 @@ function Produto_Card({ name, price, image, credit, id }) {
 
           <del>{'R$ ' + (priceTreated * 1.05).toFixed(2)}</del>
           <p className={styles.preco}>{price}</p>
-          {calculateCredit(priceTreated)}
+          {calculateCredit(priceTreated, credit)}
         </div>
       </div>
     </Link>
