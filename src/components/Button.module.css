@@ -1,0 +1,17 @@
+.botao {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #03282F;
+  color: #00FF7A;
+  transition: 0.3s ease;
+}
+
+.botao:hover,
+:global(.ativo) {
+  background-color: #00ff7a;
+  color: #051418;
+}

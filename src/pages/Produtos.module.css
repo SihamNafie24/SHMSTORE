@@ -3,3 +3,14 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
+
+.opcoes {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.opcoes a {
+  color: aliceblue;
+}
