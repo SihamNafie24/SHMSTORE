@@ -4,6 +4,7 @@ import calculateCredit from '../../functions/CalculateCredit';
 import ButtonPrimary from '../Button/ButtonPrimary';
 import ButtonSecondary from '../Button/ButtonSecondary';
 import Input from '../Form/Input';
+import axios from 'axios';
 
 function ProdutoDisplay({
   name,
@@ -15,9 +16,27 @@ function ProdutoDisplay({
   id,
   seller,
 }) {
-  const [value, setValue] = React.useState('');
+  const [cep, setCep] = React.useState('');
+  const [data, setData] = React.useState(null);
 
   const priceTreated = Number(price.replace('R$ ', '')).toFixed(2);
+
+  function handleChange({ target }) {
+    setCep(target.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (/^([\d]{2})\.*([\d]{3})-?([\d]{3})$/.test(cep)) {
+      const cepValue = cep.replace(/\.|-/, '');
+
+      axios
+        .get(`https://viacep.com.br/ws/${cepValue}/json/`)
+        .then(({ data }) => setData(data));
+    }
+  }
+
   return (
     <main className={`${styles.container} comeFromBottom`}>
       <div className={styles.image}>
@@ -42,14 +61,25 @@ function ProdutoDisplay({
             <ButtonSecondary text="Retirar na loja" />
           </div>
         </div>
-        <div className={styles.cep}>
-          <Input
-            placeholder="Digite seu CEP aqui"
-            id="cep"
-            setValue={setValue}
-            value={value}
-          />
-          <ButtonSecondary text="consultar" />
+        <div className={styles.cepContainer}>
+          <form onSubmit={handleSubmit} className={styles.cep}>
+            <Input
+              label="Digite seu Cep:"
+              placeholder="00000-000"
+              id="cep"
+              onChange={handleChange}
+              value={cep}
+            />
+            <ButtonSecondary text="consultar" />
+          </form>
+          {data && data.logradouro && (
+            <div className={styles.cepResponse}>
+              <p>{data.logradouro}</p>
+              <p>
+                {data.localidade}/{data.uf}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </main>

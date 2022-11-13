@@ -1,14 +1,28 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.container > div {
+  position: relative;
+  display: grid;
+}
+
+.label {
+  white-space: nowrap;
+}
+
 .input {
   background-color: transparent;
-  border: 2px solid #03282F;
-  color: #AEAEAE;
+  border: 2px solid #03282f;
+  color: #d6d6d6;
   font-family: 'Roboto', sans-serif;
   font-size: 0.875rem;
   border-radius: 6px;
   padding: 14px;
   outline: none;
-  transition: .3s;
-  width: 100%;
+  transition: 0.3s;
 }
 .input:focus {
   border-color: #05424f;

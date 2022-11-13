@@ -69,3 +69,37 @@ span, small {
   display: flex;
   gap: 24px;
 }
+
+.cepContainer {
+  position: relative;
+}
+
+.cepResponse {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  border-radius: 0 0 12px 12px;
+  padding: 20px 24px 8px 24px;
+  background-color: #03282F;
+  gap: 12px;
+  position: absolute;
+  bottom: 0px;
+  z-index: -1;
+  width: 100%;
+  animation: show .3s forwards;
+}
+
+.cepResponse::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  display: block;
+  background-image: url('../../img/icons/map-icon.svg');
+}
+
+@keyframes show {
+  to {
+    bottom: -34px;
+  }
+}
