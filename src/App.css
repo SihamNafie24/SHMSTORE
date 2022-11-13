@@ -21,13 +21,13 @@ img {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #F4F4F4;
 }
 
 .App {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh + 100px);
+  min-height: calc(100vh + 424px);
 }
 
 .container {

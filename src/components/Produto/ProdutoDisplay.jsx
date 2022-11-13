@@ -81,7 +81,7 @@ function ProdutoDisplay({
             <div className={styles.cepResponse}>
               <p>{data.logradouro}</p>
               <p>
-                {data.localidade}/{data.uf}
+                {data.localidade} / {data.uf}
               </p>
             </div>
           )}

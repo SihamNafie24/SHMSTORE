@@ -1,0 +1,30 @@
+.redes {
+  padding: 32px;
+  background-color: #061B21;
+  border-radius: 12px;
+  width: max-content;
+  height: max-content;
+  position: relative;
+}
+
+.redes h2 {
+  font-weight: 500;
+  text-transform: lowercase;
+  margin-bottom: 32px;
+}
+
+.redesContainer {
+  display: flex;
+  gap: 12px;
+}
+
+.redesIcons {
+  display: block;
+  background-color: #00FF7A;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.redesIcons img {
+  width: 24px;
+}

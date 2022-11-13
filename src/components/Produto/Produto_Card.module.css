@@ -41,6 +41,7 @@
 
 .card del, .card small {
   font-size: .875rem;
+  margin: 0;
 }
 
 .card del {

@@ -6,10 +6,9 @@ import Loading from '../components/Loading';
 import ButtonNav from '../components/Button/ButtonNav';
 import Head from '../components/global/Head';
 
-
 function Produtos() {
   const [data, setData] = React.useState(null);
-  const [produtos, setProdutos] = React.useState(null)
+  const [produtos, setProdutos] = React.useState(null);
   const [loading, setLoading] = React.useState(false);
   const [erro, setErro] = React.useState(null);
   const [ativo, setAtivo] = React.useState(null);
@@ -31,37 +30,33 @@ function Produtos() {
   }, []);
 
   function handleClick({ target }) {
-    if (target.innerText === 'ver tudo') {
-      setAtivo(null)
-    } else {
-      setAtivo(target.innerText)
-    }
+    setAtivo(target.innerText);
   }
 
   React.useEffect(() => {
     if (data) {
-      if (!ativo) {
-        setProdutos(data)
+      if (!ativo || ativo === 'ver tudo') {
+        setProdutos(data);
       } else {
-        setProdutos(data.filter(produto => {
-          return produto.tag === ativo
-        }))
+        setProdutos(
+          data.filter((produto) => {
+            return produto.tag === ativo;
+          }),
+        );
       }
     }
-  }, [data, ativo])
+  }, [data, ativo]);
 
   if (loading) return <Loading />;
   if (erro) return <p>{erro}</p>;
   if (!produtos) return null;
   return (
     <section>
-      <Head title='Tech Store' />
+      <Head title="Tech Store" />
       <div className={styles.opcoes}>
         <ButtonNav onClick={handleClick} ativo={ativo} text="console" />
         <ButtonNav onClick={handleClick} ativo={ativo} text="acessorio" />
-        {ativo && (
-          <ButtonNav ativo={ativo} onClick={handleClick} text="ver tudo" />
-        )}
+        <ButtonNav ativo={ativo} onClick={handleClick} text="ver tudo" />
       </div>
       <div className={`${styles.container} comeFromBottom`}>
         {produtos.map((produto) => (
@@ -72,4 +67,4 @@ function Produtos() {
   );
 }
 
-export default Produtos
+export default Produtos;
