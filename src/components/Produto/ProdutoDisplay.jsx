@@ -18,8 +18,13 @@ function ProdutoDisplay({
 }) {
   const [cep, setCep] = React.useState('');
   const [data, setData] = React.useState(null);
+  const imageRef = React.useRef();
 
   const priceTreated = Number(price.replace('R$ ', '')).toFixed(2);
+
+  React.useEffect(() => {
+    imageRef.current.dataset.content = tag;
+  }, []);
 
   function handleChange({ target }) {
     setCep(target.value);
@@ -39,7 +44,7 @@ function ProdutoDisplay({
 
   return (
     <main className={`${styles.container} comeFromBottom`}>
-      <div className={styles.image}>
+      <div className={styles.image} ref={imageRef}>
         <img src={image} alt={name} />
       </div>
       <div className={styles.info}>
