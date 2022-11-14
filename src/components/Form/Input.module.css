@@ -1,6 +1,7 @@
-.container > div {
-  position: relative;
-  display: grid;
+.container {
+  display: flex;
+  gap: 24px;
+  align-items: center;
 }
 
 .label {

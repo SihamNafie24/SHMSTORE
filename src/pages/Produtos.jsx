@@ -54,9 +54,10 @@ function Produtos() {
     <section>
       <Head title="Tech Store" />
       <div className={styles.opcoes}>
-        <ButtonNav onClick={handleClick} ativo={ativo} text="console" />
-        <ButtonNav onClick={handleClick} ativo={ativo} text="acessorio" />
-        <ButtonNav ativo={ativo} onClick={handleClick} text="ver tudo" />
+        <ButtonNav onClick={handleClick} ativo={ativo} text="games" />
+        <ButtonNav onClick={handleClick} ativo={ativo} text="consoles" />
+        <ButtonNav onClick={handleClick} ativo={ativo} text="acessórios" />
+        <ButtonNav onClick={handleClick} ativo={ativo} text="ver tudo" />
       </div>
       <div className={`${styles.container} comeFromBottom`}>
         {produtos.map((produto) => (

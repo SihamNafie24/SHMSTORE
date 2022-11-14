@@ -9,7 +9,7 @@
 
 .image {
   background-color: #fff;
-  min-height: 520px;
+  max-height: 560px;
 }
 
 .image img {

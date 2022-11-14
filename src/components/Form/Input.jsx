@@ -3,7 +3,7 @@ import styles from './Input.module.css';
 
 function Input({ label, id, onChange, value, placeholder }) {
   return (
-    <>
+    <div className={styles.container}>
       {label && (
         <label className={styles.label} htmlFor={id}>
           {label}
@@ -17,7 +17,7 @@ function Input({ label, id, onChange, value, placeholder }) {
         onChange={onChange}
         placeholder={placeholder}
       />
-    </>
+    </div>
   );
 }
 
