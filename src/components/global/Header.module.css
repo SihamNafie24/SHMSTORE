@@ -6,6 +6,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 24px;
   padding-bottom: 24px;
 }
@@ -22,7 +23,7 @@
 .userNav > p {
   color: #CCCCCC;
   font-size: 0.875rem;
-  max-width: 10ch;
+  width: 10ch;
   text-align: left;
   font-weight: 500;
 }

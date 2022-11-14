@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './Header.module.css';
 import logo from '../../img/logo.svg';
-import userIcon from '../../img/icons/user-icon.svg'
+import userIcon from '../../img/icons/user-icon.svg';
 import { Link } from 'react-router-dom';
 
 function Header() {
+
   return (
     <header className={styles.headerBackground}>
       <div className={`${styles.header} container`}>

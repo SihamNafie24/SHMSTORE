@@ -23,6 +23,11 @@
   background-color: #00FF7A;
   padding: 16px;
   border-radius: 8px;
+  transition: .3s;
+}
+
+.redesIcons:hover {
+  background-color: #03282F;
 }
 
 .redesIcons img {
