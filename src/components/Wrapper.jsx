@@ -32,7 +32,7 @@ function Wrapper({ text, info }) {
         />
       </button>
 
-      <div ref={bodyRef} className={`${styles.body} ${ativo ? 'show' : ''}`}>
+      <div ref={bodyRef} className={`${styles.body}`}>
         <p className={styles.info}>{info}</p>
       </div>
     </div>

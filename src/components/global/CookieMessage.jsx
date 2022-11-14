@@ -37,4 +37,4 @@ function CookieMessage() {
   );
 }
 
-export default CookieMessage;
+export default React.memo(CookieMessage)

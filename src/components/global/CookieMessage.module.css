@@ -3,6 +3,11 @@
   width: 100%;
   bottom: 24px;
   z-index: 99;
+  transition: .3s;
+}
+
+:global(.show) {
+  bottom: 24px;
 }
 
 .content {
