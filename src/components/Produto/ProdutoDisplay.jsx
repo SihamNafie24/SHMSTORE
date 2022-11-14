@@ -23,6 +23,9 @@ function ProdutoDisplay({
   const priceTreated = Number(price.replace('R$ ', '')).toFixed(2);
 
   React.useEffect(() => {
+    const endereco = JSON.parse(localStorage.getItem('endereco')) 
+    if (endereco) setData(endereco)
+
     imageRef.current.dataset.content = tag;
   }, []);
 
@@ -30,15 +33,23 @@ function ProdutoDisplay({
     setCep(target.value);
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
     if (/^([\d]{2})\.*([\d]{3})-?([\d]{3})$/.test(cep)) {
       const cepValue = cep.replace(/\.|-/, '');
 
-      axios
-        .get(`https://viacep.com.br/ws/${cepValue}/json/`)
-        .then(({ data }) => setData(data));
+      const { data } = await axios.get(
+        `https://viacep.com.br/ws/${cepValue}/json/`,
+      );
+      
+      setData(data)
+
+      const {logradouro, localidade, uf} = data
+
+      if (logradouro) {
+        window.localStorage.setItem('endereco', JSON.stringify({logradouro, localidade, uf}));
+      }
     }
   }
 

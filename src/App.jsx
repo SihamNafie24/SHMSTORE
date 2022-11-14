@@ -4,6 +4,7 @@ import Footer from './components/global/Footer';
 import Header from './components/global/Header';
 import Produtos from './pages/Produtos';
 import Produto from './pages/Produto'
+import CookieMessage from './components/global/CookieMessage';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path='produto/:id' element={<Produto />} />
       </Routes>
     </div>
+    <CookieMessage />
     <Footer />
     </BrowserRouter>
   </div>;
