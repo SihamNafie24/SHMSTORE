@@ -75,7 +75,7 @@ function Produtos() {
     <section>
       <Head title="Tech Store" />
       <Slide slides={slides} />
-      <div className={styles.opcoes}>
+      <div className={`${styles.opcoes} comeFromBottom`}>
         <ButtonNav onClick={handleClick} ativo={ativo} text="games" />
         <ButtonNav onClick={handleClick} ativo={ativo} text="consoles" />
         <ButtonNav onClick={handleClick} ativo={ativo} text="acessórios" />

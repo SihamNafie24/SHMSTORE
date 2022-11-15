@@ -29,8 +29,19 @@ function Slide({ slides }) {
     setSlideAtivo(index);
   }
 
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      if (slideAtivo < slides.length - 1) {
+        setSlideAtivo(slideAtivo + 1);
+      } else if (slideAtivo > 0) {
+        setSlideAtivo(0);
+      }
+    }, 6000);
+    return () => clearInterval(interval);
+  }, [slideAtivo]);
+
   return (
-    <section className={styles.wrapper}>
+    <section className={`${styles.wrapper} comeFromBottom`}>
       <div className={styles.container}>
         <div
           className={styles.content}
@@ -38,12 +49,17 @@ function Slide({ slides }) {
           style={{ transform: `translateX(${posicao}px)` }}
         >
           {slides.map((slide) => (
-            <div className={styles.item} key={slide.id} style={{backgroundImage: `url('${slide.image}')`}}></div>
+            <div
+              className={styles.item}
+              key={slide.id}
+              style={{ backgroundImage: `url('${slide.image}')` }}
+            ></div>
           ))}
         </div>
         <div className={styles.dotsContainer}>
           {slides.map((slide, index) => (
             <button
+              style={{backgroundColor: index === slideAtivo ? '#F4F4F4' : '#E0E0E080'}}
               className={styles.dots}
               key={index + 1}
               onClick={() => goToSlide(index)}
