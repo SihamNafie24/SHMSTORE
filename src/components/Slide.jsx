@@ -16,6 +16,8 @@ function Slide({ slides }) {
   function slideNext() {
     if (slideAtivo < slides.length - 1) {
       setSlideAtivo(slideAtivo + 1);
+    } else {
+      setSlideAtivo(0)
     }
   }
 
