@@ -1,0 +1,66 @@
+import React from 'react';
+import styles from './slide.module.css';
+import arrowRight from '../img/icons/right-arrow-icon.svg';
+import arrowLeft from '../img/icons/left-arrow-icon.svg';
+
+function Slide({ slides }) {
+  const [slideAtivo, setSlideAtivo] = React.useState(0);
+  const [posicao, setPosicao] = React.useState(0);
+  const contentRef = React.useRef();
+
+  React.useEffect(() => {
+    const { width } = contentRef.current.getBoundingClientRect();
+    setPosicao(-(width * slideAtivo));
+  }, [slideAtivo]);
+
+  function slideNext() {
+    if (slideAtivo < slides.length - 1) {
+      setSlideAtivo(slideAtivo + 1);
+    }
+  }
+
+  function slidePrev() {
+    if (slideAtivo > 0) {
+      setSlideAtivo(slideAtivo - 1);
+    }
+  }
+
+  function goToSlide(index) {
+    setSlideAtivo(index);
+  }
+
+  return (
+    <section className={styles.wrapper}>
+      <div className={styles.container}>
+        <div
+          className={styles.content}
+          ref={contentRef}
+          style={{ transform: `translateX(${posicao}px)` }}
+        >
+          {slides.map((slide) => (
+            <div className={styles.item} key={slide.id} style={{backgroundImage: `url('${slide.image}')`}}></div>
+          ))}
+        </div>
+        <div className={styles.dotsContainer}>
+          {slides.map((slide, index) => (
+            <button
+              className={styles.dots}
+              key={index + 1}
+              onClick={() => goToSlide(index)}
+            ></button>
+          ))}
+        </div>
+      </div>
+      <nav className={styles.nav}>
+        <button className={styles.prevButton} onClick={slidePrev}>
+          <img src={arrowLeft} alt="" />
+        </button>
+        <button className={styles.nextButton} onClick={slideNext}>
+          <img src={arrowRight} alt="" />
+        </button>
+      </nav>
+    </section>
+  );
+}
+
+export default Slide;

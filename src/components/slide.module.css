@@ -1,0 +1,65 @@
+.wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.container {
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.item {
+  width: 100%;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 160px 0;
+}
+
+.nav {
+  position: absolute;
+  top: 46%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.prevButton {
+  position: relative;
+  left: -24px;
+}
+
+.nextButton {
+  position: relative;
+  right: -24px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.dotsContainer {
+  position: absolute;
+  bottom: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.dots {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff33;
+}
