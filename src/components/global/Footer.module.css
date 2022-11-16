@@ -43,6 +43,7 @@
 
 .footer a {
   font-size: 1.1rem;
+  width: max-content;
   font-weight: 500;
   color: #CCC;
   transition: .3s;

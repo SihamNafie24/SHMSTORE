@@ -5,9 +5,11 @@ import Loading from '../components/Loading';
 import ProdutoDisplay from '../components/Produto/ProdutoDisplay';
 import Head from '../components/global/Head';
 import Wrapper from '../components/Wrapper';
+import { GlobalContext } from '../context/GlobalContext';
 
 function Produto() {
   const { id } = useParams();
+  const { adicionarProduto } = React.useContext(GlobalContext);
 
   const [produto, setProduto] = React.useState(null);
   const [loading, setLoading] = React.useState(false);
@@ -26,9 +28,10 @@ function Produto() {
       }
     };
 
-    fetchApi(`https://fake-server-company.herokuapp.com/products/${id}?_expand=seller`);
+    fetchApi(
+      `https://fake-server-company.herokuapp.com/products/${id}?_expand=seller`,
+    );
   }, []);
-
 
   if (loading) return <Loading />;
   if (erro) return <p>{erro}</p>;
@@ -36,8 +39,8 @@ function Produto() {
   return (
     <>
       <Head title={produto.name} />
-      <ProdutoDisplay {...produto} />
-      <Wrapper text='Descrição' info={produto.description}/>
+      <ProdutoDisplay handleClick={adicionarProduto} {...produto} />
+      <Wrapper text="Descrição" info={produto.description} />
     </>
   );
 }

@@ -6,6 +6,7 @@ import ButtonSecondary from '../Button/ButtonSecondary';
 import Input from '../Form/Input';
 import axios from 'axios';
 
+
 function ProdutoDisplay({
   name,
   price,
@@ -15,6 +16,7 @@ function ProdutoDisplay({
   credit,
   id,
   seller,
+  handleClick
 }) {
   const [cep, setCep] = React.useState('');
   const [data, setData] = React.useState(null);
@@ -73,7 +75,7 @@ function ProdutoDisplay({
             {calculateCredit(priceTreated, credit)}
           </div>
           <div className={styles.buttons}>
-            <ButtonPrimary text="Comprar" />
+            <ButtonPrimary onClick={() => handleClick(id)} text="Comprar" />
             <ButtonSecondary text="Retirar na loja" />
           </div>
         </div>
@@ -102,4 +104,4 @@ function ProdutoDisplay({
   );
 }
 
-export default ProdutoDisplay;
+export default ProdutoDisplay

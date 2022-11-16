@@ -1,0 +1,11 @@
+.carrinho {
+  position: fixed;
+  padding: 32px;
+  background-color: #03282F;
+  height: 100%;
+  z-index: 99;
+  box-shadow: -14px 0px 40px rgba(126, 126, 126, 0.06);
+  transition: .3s;
+  
+}
+

@@ -9,12 +9,11 @@
 
 .image {
   background-color: #fff;
-  max-height: 560px;
 }
 
 .image img {
   width: 100%;
-  height: 100%;
+  height: 546px;
   object-fit: cover;
   object-position: center;
 }
