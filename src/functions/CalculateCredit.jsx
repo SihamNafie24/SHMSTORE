@@ -1,5 +1,5 @@
 const calculateCredit = (price, credit) => {
-  if (!credit)
+  if (credit == 'false')
     return (
       <small>
         <span style={{ fontWeight: 'bold' }}>Á vista</span>

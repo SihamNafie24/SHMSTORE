@@ -1,0 +1,173 @@
+ .container{
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   background-color: #061b21;
+   border-radius: 12px;
+   overflow: hidden;
+   margin-bottom: 32px;
+ }
+
+ .tituloP{
+  font-family:'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #00ff7a;
+  margin-bottom: 1.4rem;
+}
+
+ .image img{
+  width: 100%;
+  height:450px;
+  object-fit: cover;
+  
+}
+
+.image{
+  background-color:  #fff;
+}
+
+.titulo{
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #f4f4f4;
+}
+
+.preco{
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #f4f4f4;
+}
+
+.desc{
+  font-family:'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #BEBEBE;
+  line-height: 1.6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 70ch;
+}
+
+.id{
+  font-weight: 400;
+  font-size: 20px;
+  color: #00ff7a;
+}
+
+.info{
+  padding: 2rem;
+  display: grid;
+  gap:1rem;
+}
+
+.bool{
+  font-family:'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #BEBEBE;
+}
+
+@media(max-width:600px){
+  .container{
+    width: 90vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .tituloP{
+    font-family:'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #00ff7a;
+    margin-bottom: 1rem;
+  }
+
+  .titulo{
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  
+  .preco{
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .desc{
+    font-family:'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #BEBEBE;
+    line-height: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 70ch;
+  }
+
+  .info{
+   max-width: 100vw;
+   display: flex;
+   flex-direction: column;
+  }
+  .image img{
+    width: 100%;
+    height:320px;
+    object-fit: cover;
+    
+  }
+
+}
+
+@media(max-width:400px){
+  .container{
+    width: 90vw;
+    height: 105vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .tituloP{
+    font-family:'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #00ff7a;
+    margin-bottom: 1rem;
+  }
+
+  .titulo{
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  
+  .preco{
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .desc{
+    font-family:'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #BEBEBE;
+    line-height: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 70ch;
+  }
+
+  .info{
+   max-width: 100vw;
+   display: flex;
+   flex-direction: column;
+  }
+}

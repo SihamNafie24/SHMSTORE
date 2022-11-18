@@ -7,6 +7,8 @@ import Produto from './pages/Produto';
 import CookieMessage from './components/global/CookieMessage';
 import { GlobalCarrinho } from './context/GlobalContext';
 import Carrinho from './components/Carrinho/Carrinho';
+import Vendedores from './pages/Vendedores';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -15,9 +17,12 @@ function App() {
         <BrowserRouter>
           <Header />
           <div className="content">
-            <Routes>
+          <Routes>
               <Route path="/" element={<Produtos />} />
               <Route path="produto/:id" element={<Produto />} />
+              <Route path="login" element={<Login />}>
+                <Route path="usuario" element={<Vendedores />} />
+              </Route>
             </Routes>
           </div>
           <CookieMessage />

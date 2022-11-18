@@ -1,0 +1,9 @@
+.tituloP{
+    font-family:'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #00ff7a;
+    margin-bottom: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+}

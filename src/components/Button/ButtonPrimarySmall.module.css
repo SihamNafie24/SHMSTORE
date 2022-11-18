@@ -1,0 +1,19 @@
+.buttonPrimary {
+    padding: 6px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background-color:  #00FF7A;
+    color: #03282F;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+  }
+  
+  .buttonPrimary:hover {
+    background-color: #03282F;
+    color: #00FF7A;
+    border-color: #00FF7A;
+  }
