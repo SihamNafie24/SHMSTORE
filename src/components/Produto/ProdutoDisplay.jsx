@@ -75,7 +75,7 @@ function ProdutoDisplay({
             {calculateCredit(priceTreated, credit)}
           </div>
           <div className={styles.buttons}>
-            <ButtonPrimary onClick={() => handleClick(id)} text="Comprar" />
+            <ButtonPrimary onClick={() => handleClick(id, price)} text="Comprar" />
             <ButtonSecondary text="Retirar na loja" />
           </div>
         </div>

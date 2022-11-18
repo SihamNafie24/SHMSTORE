@@ -1,11 +1,55 @@
 .carrinho {
   position: fixed;
-  padding: 32px;
-  background-color: #03282F;
+  padding: 96px 32px;
+  background-color: #03282f;
+  overflow-x: auto;
   height: 100%;
   z-index: 99;
   box-shadow: -14px 0px 40px rgba(126, 126, 126, 0.06);
-  transition: .3s;
-  
+  transition: 0.3s;
 }
 
+.closeBtn {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+
+.totalContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background-color: #02181D;
+  border-radius: 12px;
+  gap: 16px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.totalContainer div:nth-child(2) {
+  margin-top: 12px;
+}
+
+.totalContainer div:nth-child(2):before {
+  position: absolute;
+  top: -12px;
+  content: '';
+  width: 100%;
+  display: block;
+  height: 1px;
+  margin-bottom: 40px;
+  background-color: #03282f;
+} 
+
+.label {
+  font-weight: 700;
+}
+
+.mensagemVazio {
+  font-size: 2rem;
+  color: #CCC;
+}

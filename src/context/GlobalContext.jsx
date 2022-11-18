@@ -4,13 +4,14 @@ export const GlobalContext = React.createContext();
 
 export const GlobalCarrinho = ({ children }) => {
   const [produtosCarrinho, setprodutosCarrinho] = React.useState([]);
+  const [showCarrinho, setShowCarrinho] = React.useState(false);
 
-  function adicionarProduto(id) {
+  function adicionarProduto(id, price) {
     const copiaprodutosCarrinho = [...produtosCarrinho];
     const item = copiaprodutosCarrinho.find((produto) => produto.id === id);
 
     if (!item) {
-      copiaprodutosCarrinho.push({ id: id, qtd: 1 });
+      copiaprodutosCarrinho.push({ id, qtd: 1, price: price });
     } else {
       item.qtd = item.qtd + 1;
     }
@@ -44,6 +45,8 @@ export const GlobalCarrinho = ({ children }) => {
         adicionarProduto,
         removerProduto,
         limparCarrinho,
+        showCarrinho,
+        setShowCarrinho
       }}
     >
       {children}

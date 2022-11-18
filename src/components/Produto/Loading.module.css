@@ -1,0 +1,14 @@
+.loading {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 16px solid #00ff7a;
+  border-left-color: transparent;
+  animation: loading 0.6s linear infinite;
+}
+
+@keyframes loading {
+  to {
+    rotate: 1turn;
+  }
+}

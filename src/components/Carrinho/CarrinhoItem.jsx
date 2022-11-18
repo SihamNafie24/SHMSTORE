@@ -4,6 +4,7 @@ import styles from './CarrinhoItem.module.css';
 import { GlobalContext } from '../../context/GlobalContext';
 import minusIcon from '../../img/icons/minus-icon.svg';
 import plusIcon from '../../img/icons/plus-icon.svg';
+import LoadingSmall from '../Produto/LoadingSmall';
 
 function CarrinhoItem({ id, qtd }) {
   const [produto, setProduto] = React.useState(null);
@@ -29,7 +30,7 @@ function CarrinhoItem({ id, qtd }) {
     fetchApi(`https://fake-server-company.herokuapp.com/products/get/${id}`);
   }, []);
 
-  if (loading) return <p>Carregando ...</p>;
+  if (loading) return <div style={{display: 'grid', placeItems: 'center', padding: '24px'}}><LoadingSmall /></div> ;
   if (erro) return <p>{erro}</p>;
   if (produto)
     return (
@@ -39,7 +40,9 @@ function CarrinhoItem({ id, qtd }) {
         </div>
         <div className={styles.info}>
           <p className={styles.nome}>{produto.name}</p>
-          <p className={styles.preco}>{`R$ ${(Number(produto.price.replace('R$ ', '')) * qtd).toFixed(2)}`}</p>
+          <p className={styles.preco}>{`R$ ${(
+            Number(produto.price.replace('R$ ', '')) * qtd
+          ).toFixed(2)}`}</p>
           <div className={styles.quantidade}>
             <button
               className={styles.removerBtn}
@@ -61,4 +64,4 @@ function CarrinhoItem({ id, qtd }) {
     );
 }
 
-export default CarrinhoItem
+export default CarrinhoItem;

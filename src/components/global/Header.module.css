@@ -11,19 +11,28 @@
   padding-bottom: 24px;
 }
 
-.userNav {
+.header nav {
   display: flex;
-  background-color: transparent;
-  border: none;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
 }
 
-.userNav > p {
-  color: #CCCCCC;
-  font-size: 0.875rem;
-  width: 10ch;
-  text-align: left;
-  font-weight: 500;
+.bag {
+  position: relative;
+}
+
+.bag::before {
+  content: attr(data-content);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  color: #262626;
+  border-radius: 50%;
+  font-family: 'Roboto';
+  font-weight: 700;
+  width: 12px;
+  height: 12px;
+  padding: 2px;
+  position: absolute;
+  right: 2px;
 }
