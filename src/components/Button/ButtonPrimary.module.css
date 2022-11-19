@@ -17,3 +17,7 @@
   color: #00FF7A;
   border-color: #00FF7A;
 }
+
+.buttonPrimary:disabled {
+  background-color:  #00ff7ba2;
+}

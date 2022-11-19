@@ -46,10 +46,10 @@ export const GlobalCarrinho = ({ children }) => {
         removerProduto,
         limparCarrinho,
         showCarrinho,
-        setShowCarrinho
+        setShowCarrinho,
       }}
     >
       {children}
     </GlobalContext.Provider>
   );
-}
+};

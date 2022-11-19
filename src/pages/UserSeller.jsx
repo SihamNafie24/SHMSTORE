@@ -3,16 +3,17 @@ import axios from 'axios';
 import UserInfo from '../components/User/UserInfo';
 import UserProduct from '../components/User/UserProduct';
 import UserModal from '../components/User/UserModal';
-import styles from './Vendedores.module.css';
+import styles from './UserSeller.module.css';
 import ButtonPrimary from '../components/Button/ButtonPrimary';
 import Head from '../components/global/Head';
 import Loading from '../components/Loading'
+import { useParams } from 'react-router-dom';
 
 /* <Input value={value} onChange={handleChange} id='buscador' place='ID' />
  <Button text='Buscar' /> */
 
-const Vendedores = () => {
-  let id = 2;
+const UserSeller = () => {
+  const {'*':id} = useParams()
   const [response, setResponse] = React.useState(null);
   const [showModal, setShowModal] = React.useState(false);
   const [modalInfo, setModalInfo] = React.useState();
@@ -64,4 +65,4 @@ const Vendedores = () => {
   );
 };
 
-export default Vendedores;
+export default UserSeller;

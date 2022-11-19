@@ -1,0 +1,17 @@
+.container {
+  padding: 36px 48px 60px 48px;
+  background-color: #061b21;
+  border-radius: 12px;
+}
+
+.titulo {
+  margin-bottom: 24px;
+  color: #00ff7a;
+  margin-bottom: 30px;
+}
+
+.formulario {
+  display: grid;
+  gap: 24px;
+  width: 320px;
+}

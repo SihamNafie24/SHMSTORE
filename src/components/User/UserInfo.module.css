@@ -1,17 +1,25 @@
-.container{
-    font-family:'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 1.2rem;
-    color: #BEBEBE;
-    display: grid;
-    gap:0.6rem;
-    margin-bottom: 60px;
+.container {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #bebebe;
+  display: grid;
+  gap: 0.6rem;
+  margin-bottom: 60px;
 }
 
-.titulo{
-    font-family:'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 1.4rem;
-    color: #00ff7a;
-    margin-bottom: 1rem;
+.titulo {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #00ff7a;
+  margin-bottom: 1rem;
+}
+
+.botaoSair {
+  color: #00ff7a;
+  width: max-content;
+  padding: 0;
+  font-size: 1rem;
+  text-decoration:underline;
 }

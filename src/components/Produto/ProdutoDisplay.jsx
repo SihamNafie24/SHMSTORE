@@ -20,6 +20,7 @@ function ProdutoDisplay({
 }) {
   const [cep, setCep] = React.useState('');
   const [data, setData] = React.useState(null);
+  const [loading, setLoading] = React.useState(null)
   const imageRef = React.useRef();
 
   const priceTreated = Number(price.replace('R$ ', '')).toFixed(2);
@@ -39,6 +40,7 @@ function ProdutoDisplay({
     e.preventDefault();
 
     if (/^([\d]{2})\.*([\d]{3})-?([\d]{3})$/.test(cep)) {
+      setLoading(true)
       const cepValue = cep.replace(/\.|-/, '');
 
       const { data } = await axios.get(
@@ -48,7 +50,7 @@ function ProdutoDisplay({
       setData(data)
 
       const {logradouro, localidade, uf} = data
-
+      setLoading(false)
       if (logradouro) {
         window.localStorage.setItem('endereco', JSON.stringify({logradouro, localidade, uf}));
       }
@@ -81,14 +83,14 @@ function ProdutoDisplay({
         </div>
         <div className={styles.cepContainer}>
           <form onSubmit={handleSubmit} className={styles.cep}>
+            <label style={{whiteSpace: 'noWrap', display: 'flex', alignItems: 'center'}} htmlFor="cep">Digite seu CEP:</label>
             <Input
-              label="Digite seu Cep:"
               placeholder="00000-000"
               id="cep"
               onChange={handleChange}
               value={cep}
             />
-            <ButtonSecondary text="consultar" />
+            <ButtonSecondary text={loading ? 'carregando' : "consultar"} disabled={loading ? true : false}/>
           </form>
           {data && data.logradouro && (
             <div className={styles.cepResponse}>

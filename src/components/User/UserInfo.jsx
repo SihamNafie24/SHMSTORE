@@ -1,9 +1,12 @@
-import React from 'react'
-import styles from './UserInfo.module.css'
+import React from 'react';
+import styles from './UserInfo.module.css';
+import { UserGlobalContext } from '../../context/UserGlobalContext';
 
 function UserInfo({ name, email, id, cpf }) {
+  const {sair} =React.useContext(UserGlobalContext)
+
   return (
-    <div>
+    <div className="comeFromBottom">
       <div className={styles.titulo}>
         <h2>Informações</h2>
       </div>
@@ -12,10 +15,10 @@ function UserInfo({ name, email, id, cpf }) {
         <p>Email: {email}</p>
         <p>CPF: {cpf}</p>
         <p>Id: {id}</p>
+        <button onClick={() => sair()} className={styles.botaoSair}>sair</button>
       </div>
     </div>
-
-  )
+  );
 }
 
-export default UserInfo
+export default UserInfo;

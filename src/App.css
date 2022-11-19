@@ -10,7 +10,13 @@ body {
   color: #f4f4f4;
 }
 
-body, h1, h2, h3, h4, p, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
   padding: 0;
   margin: 0;
 }
@@ -21,12 +27,12 @@ img {
 
 a {
   text-decoration: none;
-  color: #F4F4F4;
+  color: #f4f4f4;
 }
 
 .App {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   min-height: calc(100vh + 424px);
 }
 
@@ -38,7 +44,6 @@ a {
 }
 
 .content {
-  flex: 1;
   max-width: 1200px;
   padding: 0px 20px;
   margin: 0 auto;
@@ -49,7 +54,7 @@ a {
 .comeFromLeft {
   transform: translateX(-40px);
   opacity: 0;
-  animation: comeFromLeft .3s forwards;
+  animation: comeFromLeft 0.3s forwards;
 }
 
 @keyframes comeFromLeft {
@@ -62,7 +67,7 @@ a {
 .comeFromRight {
   transform: translateX(40px);
   opacity: 0;
-  animation: comeFromRight .3s forwards;
+  animation: comeFromRight 0.3s forwards;
 }
 
 @keyframes comeFromRight {
@@ -75,7 +80,7 @@ a {
 .comeFromBottom {
   transform: translateY(40px);
   opacity: 0;
-  animation: comeFromBottom .3s forwards;
+  animation: comeFromBottom 0.3s forwards;
 }
 
 @keyframes comeFromBottom {
@@ -88,7 +93,7 @@ a {
 .comeFromTop {
   transform: translateY(-40px);
   opacity: 0;
-  animation: comeFromTop .3s forwards;
+  animation: comeFromTop 0.3s forwards;
 }
 
 @keyframes comeFromTop {

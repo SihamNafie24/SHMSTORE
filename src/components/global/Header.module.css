@@ -19,6 +19,19 @@
   position: relative;
 }
 
+.user {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 8px;
+  color: #BEBEBE
+}
+
+.nome {
+  color: #00FF7A;
+  font-weight: 500;
+}
+
 .bag::before {
   content: attr(data-content);
   font-size: 14px;
