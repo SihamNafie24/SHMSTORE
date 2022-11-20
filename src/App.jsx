@@ -10,6 +10,7 @@ import { UserContext } from './context/UserGlobalContext';
 import Carrinho from './components/Carrinho/Carrinho';
 import Login from './pages/LoginPage';
 import QuemSomos from './pages/QuemSomos';
+import NaoEncontrada from './pages/NaoEncontrada';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                 <Route path="produto/:id" element={<Produto />} />
                 <Route path="login/*" element={<Login />} />
                 <Route path="quemsomos" element={<QuemSomos />} />
+                <Route path='*' element={<NaoEncontrada />} />
               </Routes>
             </div>
             <CookieMessage />
