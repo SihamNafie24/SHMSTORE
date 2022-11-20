@@ -29,7 +29,7 @@ export const UserContext = ({children}) => {
   }
 
   function sair () {
-    setAuth(false)
+    setAuth(null)
     setUser(null)
   }
 

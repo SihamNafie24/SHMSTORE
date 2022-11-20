@@ -16,6 +16,11 @@
   width: 320px;
 }
 
+.link {
+  color: #00ff7a;
+  font-weight: 500;
+}
+
 .mensagemErro {
   font-size: 1.2rem;
   text-align: center;

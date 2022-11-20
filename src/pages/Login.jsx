@@ -4,7 +4,7 @@ import Input from '../components/Form/Input';
 import ButtonPrimary from '../components/Button/ButtonPrimary';
 import useForm from '../hooks/useForm';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Head from '../components/global/Head';
 import { UserGlobalContext } from '../context/UserGlobalContext';
 
@@ -12,9 +12,10 @@ function Login() {
   const senha = useForm('min=8');
   const email = useForm('email');
   const [loading, setLoading] = React.useState(false);
+  const [naoEncontrado, setNaoEncontrado] = React.useState(null);
   const navigate = useNavigate();
 
-  const { setUser, setAuth, auth, user, entrar } = React.useContext(UserGlobalContext);
+  const { auth, user, entrar } = React.useContext(UserGlobalContext);
 
   React.useEffect(() => {
     if (auth && user) {
@@ -30,7 +31,9 @@ function Login() {
     );
     if (data.length > 0) {
       const [user] = data;
-      entrar(user)
+      entrar(user);
+    } else {
+      setNaoEncontrado(true);
     }
 
     setLoading(false);
@@ -59,11 +62,14 @@ function Login() {
           {...email}
         />
         <Input label="Senha:" type="password" id="password" {...senha} />
+        <div>
+          Não tem conta? <Link className={styles.link} to="cadastro">Cadastre-se</Link>{' '}
+        </div>
         <ButtonPrimary
           text={loading ? 'carregando...' : 'entrar'}
           disabled={loading ? true : false}
         />
-        {auth === false && (
+        {naoEncontrado && (
           <div className={styles.mensagemErro}>Usuário não encontrado 😥</div>
         )}
       </form>

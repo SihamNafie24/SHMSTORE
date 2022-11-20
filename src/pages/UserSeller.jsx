@@ -13,7 +13,8 @@ import { useParams } from 'react-router-dom';
  <Button text='Buscar' /> */
 
 const UserSeller = () => {
-  const {'*':id} = useParams()
+  let {'*':id} = useParams()
+  id = Number(id)
   const [response, setResponse] = React.useState(null);
   const [showModal, setShowModal] = React.useState(false);
   const [modalInfo, setModalInfo] = React.useState();

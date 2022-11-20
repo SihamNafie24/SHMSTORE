@@ -33,6 +33,12 @@ function Produto() {
     );
   }, []);
 
+  React.useEffect(() => {
+    if (produto) {
+      console.log(produto)
+    }
+  }, [produto])
+
   if (loading) return <Loading />;
   if (erro) return <p>{erro}</p>;
   if (!produto) return null;

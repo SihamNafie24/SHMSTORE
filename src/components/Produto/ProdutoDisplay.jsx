@@ -23,6 +23,8 @@ function ProdutoDisplay({
   const [loading, setLoading] = React.useState(null)
   const imageRef = React.useRef();
 
+  console.log(name)
+
   const priceTreated = Number(price.replace('R$ ', '')).toFixed(2);
 
   React.useEffect(() => {

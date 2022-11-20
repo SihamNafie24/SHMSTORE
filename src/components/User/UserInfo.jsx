@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from './UserInfo.module.css';
 import { UserGlobalContext } from '../../context/UserGlobalContext';
+import { useNavigate } from 'react-router-dom';
 
-function UserInfo({ name, email, id, cpf }) {
-  const {sair} =React.useContext(UserGlobalContext)
+function UserInfo({ name, email, id }) {
+  const { sair } = React.useContext(UserGlobalContext);
+  const navigate = useNavigate()
 
   return (
     <div className="comeFromBottom">
@@ -13,9 +15,10 @@ function UserInfo({ name, email, id, cpf }) {
       <div className={styles.container}>
         <p>Nome: {name}</p>
         <p>Email: {email}</p>
-        <p>CPF: {cpf}</p>
         <p>Id: {id}</p>
-        <button onClick={() => sair()} className={styles.botaoSair}>sair</button>
+        <button onClick={() => {sair(); navigate('/')}} className={styles.botaoSair}>
+          sair
+        </button>
       </div>
     </div>
   );
