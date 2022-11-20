@@ -23,10 +23,6 @@ function ProdutoDisplay({
   const [loading, setLoading] = React.useState(null)
   const imageRef = React.useRef();
 
-  console.log(name)
-
-  const priceTreated = Number(price.replace('R$ ', '')).toFixed(2);
-
   React.useEffect(() => {
     const endereco = JSON.parse(localStorage.getItem('endereco')) 
     if (endereco) setData(endereco)
@@ -74,9 +70,9 @@ function ProdutoDisplay({
         </div>
         <div className={styles.precoContainer}>
           <div>
-            <del>{'R$ ' + (priceTreated * 1.05).toFixed(2)}</del>
-            <p className={styles.preco}>{price}</p>
-            {calculateCredit(priceTreated, credit)}
+            <del>{'R$ ' + (price * 1.05).toFixed(2)}</del>
+            <p className={styles.preco}>R$ {price}</p>
+            {calculateCredit(price, credit)}
           </div>
           <div className={styles.buttons}>
             <ButtonPrimary onClick={() => handleClick(id, price)} text="Comprar" />

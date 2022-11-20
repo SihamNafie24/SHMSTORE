@@ -2,6 +2,7 @@
   padding: 36px 48px 60px 48px;
   background-color: #061b21;
   border-radius: 12px;
+  margin: 0 auto;
 }
 
 .titulo {
@@ -23,4 +24,29 @@
   border-radius: 12px;
   text-align: center;
   line-height: 1.5;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.message::after {
+  content: '';
+  width: 0;
+  height: 4px;
+  display: block;
+  background-color: #00ff7a;
+  position: absolute;
+  bottom: -20px;
+  bottom: 0;
+  left: 0;
+  border-radius: 12px;
+  z-index: -99;
+  animation: loading 1.8s linear forwards;
+}
+
+@keyframes loading {
+  to {
+    width: 100%;
+  }
 }

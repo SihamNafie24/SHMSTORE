@@ -33,21 +33,16 @@ function Produto() {
     );
   }, []);
 
-  React.useEffect(() => {
-    if (produto) {
-      console.log(produto)
-    }
-  }, [produto])
 
   if (loading) return <Loading />;
   if (erro) return <p>{erro}</p>;
   if (!produto) return null;
   return (
-    <>
+    <section className='container'>
       <Head title={produto.name} />
       <ProdutoDisplay handleClick={adicionarProduto} {...produto} />
       <Wrapper text="Descrição" info={produto.description} />
-    </>
+    </section>
   );
 }
 

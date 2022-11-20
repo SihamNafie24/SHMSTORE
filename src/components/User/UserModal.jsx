@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./UserModal.module.css";
-import Input from "../Form/Input";
 import ButtonPrimarySmall from "../Button/ButtonPrimarySmall";
 import ButtonSecondarySmall from "../Button/ButtonSecondarySmall";
 import axios from "axios";
@@ -14,7 +13,7 @@ const camposInput = [
   },
   {
     id: "price",
-    label: "Preço",
+    label: "Preço (R$)",
     type: "text",
   },
   {
@@ -83,7 +82,6 @@ function UserModal({ produto, fechar, sellerId }) {
               setStatusPUT(status);
             } catch (erro) {
               setErro("Erro");
-              console.log(erro);
             } finally {
               setLoading(false);
               setTimeout(() => {

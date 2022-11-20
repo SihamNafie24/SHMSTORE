@@ -21,10 +21,10 @@ function Carrinho() {
       setTotal(
         produtosCarrinho
           .map((produto) => {
-            return produto.qtd * Number(produto.price.replace('R$ ', ''));
+            return produto.qtd * produto.price;
           })
-          .reduce((anterior, atual) => {
-            return anterior + atual;
+          .reduce((valorAnterior, valorAtual) => {
+            return valorAnterior + valorAtual;
           }),
       );
     }

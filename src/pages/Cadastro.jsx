@@ -4,7 +4,7 @@ import Input from '../components/Form/Input';
 import ButtonPrimary from '../components/Button/ButtonPrimary';
 import useForm from '../hooks/useForm';
 import { UserGlobalContext } from '../context/UserGlobalContext';
-import Head from '../components/global/Head'
+import Head from '../components/global/Head';
 
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -110,32 +110,35 @@ function Cadastro() {
     }, 2000);
   }, [status]);
 
-  if (message) return <div className={`${styles.message} comeFromBottom`}>{message}</div>
+  if (message)
+    return <div className={`${styles.message} comeFromBottom`}>{message}</div>;
   return (
-    <section className={`${styles.container} comeFromBottom`}>
-      <Head title='Cadastre-se' />
-      <h1 className={styles.titulo}>Cadastre-se</h1>
-      <form className={styles.formulario} onSubmit={handleSubmit}>
-        <Input label="Nome:" id="name" {...nome} value={nome.value} />
-        <Input
-          label="Email:"
-          id="email"
-          placeholder="usuario@email.com"
-          {...email}
-          value={email.value}
-        />
-        <Input
-          label="Senha:"
-          type="password"
-          id="password"
-          {...senha}
-          value={senha.value}
-        />
-        <ButtonPrimary
-          text={loading ? 'carregando...' : 'enviar'}
-          disabled={loading ? true : false}
-        />
-      </form>
+    <section style={{display: 'flex'}}>
+      <div className={`${styles.container} comeFromBottom`}>
+        <Head title="Cadastre-se" />
+        <h1 className={styles.titulo}>Cadastre-se</h1>
+        <form className={styles.formulario} onSubmit={handleSubmit}>
+          <Input label="Nome:" id="name" {...nome} value={nome.value} />
+          <Input
+            label="Email:"
+            id="email"
+            placeholder="usuario@email.com"
+            {...email}
+            value={email.value}
+          />
+          <Input
+            label="Senha:"
+            type="password"
+            id="password"
+            {...senha}
+            value={senha.value}
+          />
+          <ButtonPrimary
+            text={loading ? 'carregando...' : 'enviar'}
+            disabled={loading ? true : false}
+          />
+        </form>
+      </div>
     </section>
   );
 }

@@ -50,29 +50,34 @@ function Login() {
   }
 
   return (
-    <section className={`${styles.container} comeFromBottom`}>
-      <Head title="Login" />
-      <h1 className={styles.titulo}>Login</h1>
-      <form className={styles.formulario} onSubmit={handleSubmit}>
-        <Input
-          label="Email:"
-          id="email"
-          placeholder="usuario@email.com"
-          value={email.value}
-          {...email}
-        />
-        <Input label="Senha:" type="password" id="password" {...senha} />
-        <div>
-          Não tem conta? <Link className={styles.link} to="cadastro">Cadastre-se</Link>{' '}
-        </div>
-        <ButtonPrimary
-          text={loading ? 'carregando...' : 'entrar'}
-          disabled={loading ? true : false}
-        />
-        {naoEncontrado && (
-          <div className={styles.mensagemErro}>Usuário não encontrado 😥</div>
-        )}
-      </form>
+    <section style={{display: 'flex'}}>
+      <div className={`${styles.container} comeFromBottom`}>
+        <Head title="Login" />
+        <h1 className={styles.titulo}>Login</h1>
+        <form className={styles.formulario} onSubmit={handleSubmit}>
+          <Input
+            label="Email:"
+            id="email"
+            placeholder="usuario@email.com"
+            value={email.value}
+            {...email}
+          />
+          <Input label="Senha:" type="password" id="password" {...senha} />
+          <div>
+            Não tem conta?{' '}
+            <Link className={styles.link} to="cadastro">
+              Cadastre-se
+            </Link>{' '}
+          </div>
+          <ButtonPrimary
+            text={loading ? 'carregando...' : 'entrar'}
+            disabled={loading ? true : false}
+          />
+          {naoEncontrado && (
+            <div className={styles.mensagemErro}>Usuário não encontrado 😥</div>
+          )}
+        </form>
+      </div>
     </section>
   );
 }

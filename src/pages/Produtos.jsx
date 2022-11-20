@@ -72,7 +72,7 @@ function Produtos() {
   if (erro) return <p>{erro}</p>;
   if (!produtos) return null;
   return (
-    <section>
+    <section className='container'>
       <Head title="Tech Store" />
       <Slide slides={slides} />
       <div className={`${styles.opcoes} comeFromBottom`}>

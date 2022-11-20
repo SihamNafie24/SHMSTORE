@@ -6,19 +6,16 @@ import UserModal from '../components/User/UserModal';
 import styles from './UserSeller.module.css';
 import ButtonPrimary from '../components/Button/ButtonPrimary';
 import Head from '../components/global/Head';
-import Loading from '../components/Loading'
+import Loading from '../components/Loading';
 import { useParams } from 'react-router-dom';
 
-/* <Input value={value} onChange={handleChange} id='buscador' place='ID' />
- <Button text='Buscar' /> */
-
 const UserSeller = () => {
-  let {'*':id} = useParams()
-  id = Number(id)
+  let { '*': id } = useParams();
+  id = Number(id);
   const [response, setResponse] = React.useState(null);
   const [showModal, setShowModal] = React.useState(false);
   const [modalInfo, setModalInfo] = React.useState();
-  const [loading, setLoading] = React.useState(null)
+  const [loading, setLoading] = React.useState(null);
 
   React.useEffect(() => {
     setLoading(true);
@@ -27,7 +24,7 @@ const UserSeller = () => {
         `https://fake-server-company.herokuapp.com/sellers/${id}?_embed=products`,
       )
       .then(({ data }) => {
-        setLoading(false)
+        setLoading(false);
         setResponse(data);
       });
   }, []);
@@ -42,7 +39,7 @@ const UserSeller = () => {
     }
   }
 
-  if (loading) return <Loading />
+  if (loading) return <Loading />;
   return (
     <section>
       <Head title="Painel do Usuario" />
@@ -51,10 +48,16 @@ const UserSeller = () => {
         <h2>Produtos</h2>
         <ButtonPrimary text="Cadastrar produto" onClick={handleClick} />
       </div>
-      {response &&
+      {response && response.products.length > 0 ? (
         response.products.map((product) => (
           <UserProduct onClick={handleClick} key={product.id} {...product} />
-        ))}
+        ))
+      ) : (
+        <div style={{ textAlign: 'center', marginTop: '120px' }}>
+          Você ainda não tem produtos cadastrados.
+          <span style={{display: 'block', cursor: 'pointer'}} onClick={handleClick}>Comece agora</span>
+        </div>
+      )}
       {showModal && (
         <UserModal
           fechar={() => setShowModal(false)}

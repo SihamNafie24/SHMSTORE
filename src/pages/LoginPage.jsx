@@ -7,10 +7,9 @@ import RotaProtegida from '../components/RotaProtegida';
 
 function LoginPage() {
   return (
-    <div>
+    <div className="container">
       <Routes>
         <Route path="" element={<Login />} />
-
         <Route
           path="usuario/*"
           element={

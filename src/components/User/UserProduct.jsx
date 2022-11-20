@@ -20,7 +20,7 @@ function UserProduct({ name, price, image, description, credit, id, onClick }) {
 
           <div>
             <p>Preço</p>
-            <p className={styles.preco}>{price}</p>
+            <p className={styles.preco}>R$ {price}</p>
           </div>
 
           <div>

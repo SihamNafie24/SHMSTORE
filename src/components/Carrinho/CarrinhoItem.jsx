@@ -40,9 +40,7 @@ function CarrinhoItem({ id, qtd }) {
         </div>
         <div className={styles.info}>
           <p className={styles.nome}>{produto.name}</p>
-          <p className={styles.preco}>{`R$ ${(
-            Number(produto.price.replace('R$ ', '')) * qtd
-          ).toFixed(2)}`}</p>
+          <p className={styles.preco}>R$ {(produto.price * qtd).toFixed(2)}</p>
           <div className={styles.quantidade}>
             <button
               className={styles.removerBtn}
