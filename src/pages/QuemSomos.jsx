@@ -6,16 +6,13 @@ import marcelo from '../img/equipe/marcelo.png';
 import matheus from '../img/equipe/matheus.png';
 import milena from '../img/equipe/milena.png';
 import yasmin from '../img/equipe/yasmin.png';
+import Head from '../components/global/Head'
 
 function QuemSomos() {
-  const [show, setShow] = React.useState(false);
-
-  function handleMouseOver() {
-    setShow(true);
-  }
 
   return (
-    <section>
+    <section className='comeFromBottom'>
+      <Head title='Quem Somos'/>
       <div className={`${styles.secao1} container`}>
         <div>
           <h2 className={styles.titulo}>quem somos</h2>
@@ -26,6 +23,7 @@ function QuemSomos() {
         </div>
         <img
           src={sobreImg}
+          className='comeFromRight'
           alt="imagem de um homem jogando e um controle de xbox"
         />
       </div>
@@ -33,6 +31,7 @@ function QuemSomos() {
       <div className={styles.secao2Bg}>
         <div className={`${styles.secao2} container`}>
           <img
+            className='comeFromLeft'
             src={sobreImg2}
             alt="jovem jogando com um oculos de realidade virtual"
           />
