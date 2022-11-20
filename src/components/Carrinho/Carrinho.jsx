@@ -33,7 +33,7 @@ function Carrinho() {
   return (
     <aside
       style={{
-        width: showCarrinho ? '460px' : '0px',
+        maxWidth: showCarrinho ? '460px' : '0px',
         right: showCarrinho ? '0px' : '-96px',
       }}
       className={styles.carrinho}

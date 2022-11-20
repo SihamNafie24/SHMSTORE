@@ -40,3 +40,16 @@
 :global(.rotate) {
   transform: rotate(180deg);
 }
+
+@media (max-width: 620px) {
+  .head {
+    padding: 16px;
+    font-size: 1.2rem;
+  }
+  .head img {
+    width: 20px;
+  }
+  .info {
+    padding: 32px 16px 16px 16px;
+  }
+}

@@ -36,17 +36,24 @@ a {
   min-height: calc(100vh + 424px);
 }
 
+@media (max-width: 920px) {
+  .App {
+    min-height: calc(100vh + 668px);
+  }
+}
+
+@media (max-width: 640px) {
+  .App {
+    min-height: calc(84vh + 912px);
+  }
+}
+
 .container {
   max-width: 1200px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
 }
-
-.content {
-  padding: 0px 20px;
-}
-
 /* Animations */
 
 .comeFromLeft {

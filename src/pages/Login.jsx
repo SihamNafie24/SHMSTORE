@@ -50,7 +50,7 @@ function Login() {
   }
 
   return (
-    <section style={{display: 'flex'}}>
+    <section>
       <div className={`${styles.container} comeFromBottom`}>
         <Head title="Login" />
         <h1 className={styles.titulo}>Login</h1>

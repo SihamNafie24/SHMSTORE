@@ -3,10 +3,10 @@
   background-color: #061b21;
   border-radius: 12px;
   margin: 0 auto;
+  max-width: 460px;
 }
 
 .titulo {
-  margin-bottom: 24px;
   color: #00ff7a;
   margin-bottom: 30px;
 }
@@ -14,11 +14,10 @@
 .formulario {
   display: grid;
   gap: 24px;
-  width: 320px;
 }
 
 .message {
-  width: 320px;
+  max-width: 320px;
   padding: 48px;
   background-color: #061b21;
   border-radius: 12px;
@@ -48,5 +47,11 @@
 @keyframes loading {
   to {
     width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 36px 36px 48px 36px;
   }
 }

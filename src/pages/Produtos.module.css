@@ -1,17 +1,29 @@
 .container {
   display: grid;
-  max-width: 1160px;
-  grid-template-columns: repeat(auto-fit, minmax(auto, 360px));
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
 
 .opcoes {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 60px;
 }
 
 .opcoes a {
   color: aliceblue;
+}
+
+@media (max-width: 1260px) {
+  .container {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    grid-template-columns: auto;
+  }
 }

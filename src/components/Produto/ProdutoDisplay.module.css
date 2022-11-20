@@ -18,21 +18,19 @@
   object-position: center;
 }
 
-
 .image::before {
   content: attr(data-content);
   font-weight: 500;
   font-size: 0.875rem;
-  background-color: #00FF7A;
+  background-color: #00ff7a;
   display: block;
   width: max-content;
   padding: 8px 16px;
   border-radius: 8px;
   margin: 12px;
   position: absolute;
-  color: #02181D;
+  color: #02181d;
 }
-
 
 .info {
   display: flex;
@@ -45,24 +43,28 @@
   font-size: 2rem;
 }
 
-.vendedor, small, del {
+.vendedor,
+small,
+del {
   font-size: 0.875rem;
   margin-bottom: 24px;
 }
 
 del {
-  color: #BEBEBE;
+  color: #bebebe;
   display: block;
   margin-bottom: 16px;
 }
 
-span, small {
-  color: #00FF7A;
+span,
+small {
+  color: #00ff7a;
 }
 
 .precoContainer {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: auto auto;
+  gap: 24px;
 }
 
 .preco {
@@ -79,7 +81,7 @@ span, small {
 
 .cep {
   width: 100%;
-  background-color: #02181D;
+  background-color: #02181d;
   padding: 24px;
   border-radius: 12px;
   display: flex;
@@ -97,13 +99,13 @@ span, small {
   grid-template-columns: auto 1fr auto;
   border-radius: 0 0 12px 12px;
   padding: 20px 24px 8px 24px;
-  background-color: #03282F;
+  background-color: #03282f;
   gap: 12px;
   position: absolute;
   bottom: 0px;
   z-index: -1;
   width: 100%;
-  animation: show .3s forwards;
+  animation: show 0.3s forwards;
 }
 
 .cepResponse::before {
@@ -117,5 +119,91 @@ span, small {
 @keyframes show {
   to {
     bottom: -34px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .preco {
+    font-size: 1.8rem;
+  }
+  .nome {
+    font-size: 1.8rem;
+  }
+  
+}
+
+@media (max-width: 1200px) and (min-width: 1000px) {
+  .cep > label {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    grid-template-columns: auto;
+  }
+}
+
+@media (max-width: 780px) {
+  .image img {
+    max-height: 460px;
+  }
+  .info {
+    gap: 36px;
+    padding: 40px 40px 80px 40px;
+  }
+}
+
+@media (max-width: 620px) {
+  .image img {
+    max-height: 320px;
+  }
+  .info {
+    gap: 24px;
+  }
+  .cep > label {
+    display: none !important;
+  }
+  .precoContainer {
+    grid-template-columns: auto;
+    gap: 40px;
+  }
+  .nome {
+    font-size: 1.5rem;
+  }
+  .preco {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .container {
+    margin-bottom: 30px;
+  }
+  .image img {
+    max-height: 280px;
+  }
+  .info {
+    padding: 20px 20px 60px 20px;
+  }
+  .precoContainer {
+    grid-template-columns: auto;
+    gap: 40px;
+  }
+  .nome {
+    font-size: 1.5rem;
+  }
+  .preco {
+    font-size: 1.5rem;
+  }
+  .cep {
+    padding: 16px;
+    gap: 12px
   }
 }

@@ -10,7 +10,7 @@ function Footer() {
       <div className={styles.footerLogo}>
         <div className="container">
           <Link to="">
-            <img src={logo} alt="tech store" />
+            <img className={styles.logo} src={logo} alt="tech store" />
           </Link>
         </div>
       </div>
@@ -45,7 +45,7 @@ function Footer() {
               <Link to="login/cadastro">Cadastro</Link>
             </li>
             <li>
-              <Link to="">Quem somos</Link>
+              <Link to="quemsomos">Quem somos</Link>
             </li>
           </ul>
         </div>

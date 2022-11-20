@@ -8,6 +8,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   padding-top: 60px;
   padding-bottom: 60px;
+  row-gap: 60px;
 }
 
 .footerLogo {
@@ -54,4 +55,22 @@
 .footer a:hover {
   color: #f4f4f4;
   text-decoration: underline;
+}
+
+@media (max-width: 920px) {
+  .footer {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 460px) {
+  .logo {
+    width: 100px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,12 +1,11 @@
-import React from "react";
-import styles from "./UserProduct.module.css";
-import ButtonPrimary from "../Button/ButtonPrimary";
+import React from 'react';
+import styles from './UserProduct.module.css';
+import ButtonPrimary from '../Button/ButtonPrimary';
 
 function UserProduct({ name, price, image, description, credit, id, onClick }) {
   return (
     <div>
       <div className={`${styles.container} comeFromBottom`}>
-
         <div className={styles.image}>
           <img src={image} alt={name} />
         </div>
@@ -25,7 +24,7 @@ function UserProduct({ name, price, image, description, credit, id, onClick }) {
 
           <div>
             <p>Parcelamento</p>
-            <p className={styles.bool}>{credit == 'true' ? "Sim" : "Não"}</p>
+            <p className={styles.bool}>{credit == 'true' ? 'Sim' : 'Não'}</p>
           </div>
 
           <div>
@@ -37,10 +36,9 @@ function UserProduct({ name, price, image, description, credit, id, onClick }) {
             <ButtonPrimary text="Editar" onClick={() => onClick(id)} />
           </div>
         </div>
-        
       </div>
     </div>
   );
 }
 
-export default UserProduct;
+export default UserProduct

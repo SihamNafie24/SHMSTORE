@@ -9,6 +9,7 @@ import { GlobalCarrinho } from './context/GlobalContext';
 import { UserContext } from './context/UserGlobalContext';
 import Carrinho from './components/Carrinho/Carrinho';
 import Login from './pages/LoginPage';
+import QuemSomos from './pages/QuemSomos';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/" element={<Produtos />} />
                 <Route path="produto/:id" element={<Produto />} />
                 <Route path="login/*" element={<Login />} />
+                <Route path="quemsomos" element={<QuemSomos />} />
               </Routes>
             </div>
             <CookieMessage />

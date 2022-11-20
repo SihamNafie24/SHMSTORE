@@ -113,7 +113,7 @@ function Cadastro() {
   if (message)
     return <div className={`${styles.message} comeFromBottom`}>{message}</div>;
   return (
-    <section style={{display: 'flex'}}>
+    <section>
       <div className={`${styles.container} comeFromBottom`}>
         <Head title="Cadastre-se" />
         <h1 className={styles.titulo}>Cadastre-se</h1>

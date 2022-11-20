@@ -3,6 +3,7 @@
   background-color: #061b21;
   border-radius: 12px;
   margin: 0 auto;
+  max-width: 460px;
 }
 
 .titulo {
@@ -14,7 +15,6 @@
 .formulario {
   display: grid;
   gap: 24px;
-  width: 320px;
 }
 
 .link {
@@ -25,4 +25,10 @@
 .mensagemErro {
   font-size: 1.2rem;
   text-align: center;
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 36px 36px 48px 36px;
+  }
 }
