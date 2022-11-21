@@ -4,6 +4,7 @@
   bottom: 24px;
   z-index: 99;
   transition: .3s;
+  padding: 0 20px;
 }
 
 :global(.show) {
@@ -27,4 +28,10 @@
 .btnsContainer {
   display: flex;
   gap: 12px;
+}
+
+@media (max-width: 720px) {
+  .btnsContainer {
+    flex-direction: column;
+  }
 }
