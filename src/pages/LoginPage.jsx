@@ -4,11 +4,13 @@ import Login from './Login';
 import UserSeller from './UserSeller';
 import Cadastro from './Cadastro';
 import RotaProtegida from '../components/RotaProtegida';
+import NaoEncontrada from '../pages/NaoEncontrada';
 
 function LoginPage() {
   return (
     <div className="container">
       <Routes>
+        <Route path="*" element={<NaoEncontrada />} />
         <Route path="" element={<Login />} />
         <Route
           path="usuario/*"
