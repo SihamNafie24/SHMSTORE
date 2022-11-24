@@ -29,16 +29,15 @@ function Produto() {
     };
 
     fetchApi(
-      `https://fake-server-company.herokuapp.com/products/${id}?_expand=seller`,
+      `https://server-techstore.onrender.com/products/${id}?_expand=seller`,
     );
   }, []);
-
 
   if (loading) return <Loading />;
   if (erro) return <p>{erro}</p>;
   if (!produto) return null;
   return (
-    <section className='container'>
+    <section className="container">
       <Head title={produto.name} />
       <ProdutoDisplay handleClick={adicionarProduto} {...produto} />
       <Wrapper text="Descrição" info={produto.description} />

@@ -15,15 +15,18 @@ const slides = [
   },
   {
     id: 'slide2',
-    image: 'https://preview.redd.it/01hdto0hzcn51.jpg?width=1846&format=pjpg&auto=webp&s=a20c4243466f1849aa29432a31310eb7628c0ba4',
+    image:
+      'https://preview.redd.it/01hdto0hzcn51.jpg?width=1846&format=pjpg&auto=webp&s=a20c4243466f1849aa29432a31310eb7628c0ba4',
   },
   {
     id: 'slide3',
-    image: 'https://www.pontofrio-imagens.com.br/criacao/03-hotsite/2020/06-junho/24-psn/bannertv-ps5.jpg',
+    image:
+      'https://www.pontofrio-imagens.com.br/criacao/03-hotsite/2020/06-junho/24-psn/bannertv-ps5.jpg',
   },
   {
     id: 'slide4',
-    image: 'https://cdn2.steamgriddb.com/file/sgdb-cdn/hero/81b69a02d9469be08c2426117991d9f0.png',
+    image:
+      'https://cdn2.steamgriddb.com/file/sgdb-cdn/hero/81b69a02d9469be08c2426117991d9f0.png',
   },
 ];
 
@@ -47,7 +50,7 @@ function Produtos() {
       }
     };
 
-    fetchApi('https://fake-server-company.herokuapp.com/products/list');
+    fetchApi('https://server-techstore.onrender.com/products/list');
   }, []);
 
   function handleClick({ target }) {
@@ -72,7 +75,7 @@ function Produtos() {
   if (erro) return <p>{erro}</p>;
   if (!produtos) return null;
   return (
-    <section className='container'>
+    <section className="container">
       <Head title="Tech Store" />
       <Slide slides={slides} />
       <div className={`${styles.opcoes} comeFromBottom`}>

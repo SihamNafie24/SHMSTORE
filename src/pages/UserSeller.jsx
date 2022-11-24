@@ -21,7 +21,7 @@ const UserSeller = () => {
     setLoading(true);
     axios
       .get(
-        `https://fake-server-company.herokuapp.com/sellers/${id}?_embed=products`,
+        `https://server-techstore.onrender.com/sellers/${id}?_embed=products`,
       )
       .then(({ data }) => {
         setLoading(false);
@@ -55,7 +55,12 @@ const UserSeller = () => {
       ) : (
         <div style={{ textAlign: 'center', marginTop: '120px' }}>
           Você ainda não tem produtos cadastrados.
-          <span style={{display: 'block', cursor: 'pointer'}} onClick={handleClick}>Comece agora</span>
+          <span
+            style={{ display: 'block', cursor: 'pointer' }}
+            onClick={handleClick}
+          >
+            Comece agora
+          </span>
         </div>
       )}
       {showModal && (

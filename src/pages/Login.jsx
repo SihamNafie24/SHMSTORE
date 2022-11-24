@@ -27,7 +27,7 @@ function Login() {
     setLoading(true);
 
     const { data } = await axios.get(
-      `https://fake-server-company.herokuapp.com/sellers?email=${emailUser}&password=${senhaUser}`,
+      `https://server-techstore.onrender.com/sellers?email=${emailUser}&password=${senhaUser}`,
     );
     if (data.length > 0) {
       const [user] = data;

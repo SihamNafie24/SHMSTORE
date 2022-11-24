@@ -1,47 +1,47 @@
-import React from "react";
-import styles from "./UserModal.module.css";
-import Input from "../Form/Input";
-import ButtonPrimarySmall from "../Button/ButtonPrimarySmall";
-import ButtonSecondarySmall from "../Button/ButtonSecondarySmall";
-import axios from "axios";
-import imgLoad from "../../img/icons/photo-icon.svg";
+import React from 'react';
+import styles from './UserModal.module.css';
+import Input from '../Form/Input';
+import ButtonPrimarySmall from '../Button/ButtonPrimarySmall';
+import ButtonSecondarySmall from '../Button/ButtonSecondarySmall';
+import axios from 'axios';
+import imgLoad from '../../img/icons/photo-icon.svg';
 
 const camposInput = [
   {
-    id: "name",
-    label: "Nome",
-    type: "text",
+    id: 'name',
+    label: 'Nome',
+    type: 'text',
   },
   {
-    id: "price",
-    label: "Preço",
-    type: "text",
+    id: 'price',
+    label: 'Preço',
+    type: 'text',
   },
   {
-    id: "image",
-    label: "Imagem",
-    type: "text",
+    id: 'image',
+    label: 'Imagem',
+    type: 'text',
   },
   {
-    id: "credit",
-    titulo: "Parcelamento",
-    type: "radio",
+    id: 'credit',
+    titulo: 'Parcelamento',
+    type: 'radio',
     options: [{ sim: true }, { não: false }],
   },
   {
-    id: "tag",
-    titulo: "Tag",
-    type: "radio",
+    id: 'tag',
+    titulo: 'Tag',
+    type: 'radio',
     options: [
-      { acessórios: "acessórios" },
-      { consoles: "consoles" },
-      { games: "games" },
+      { acessórios: 'acessórios' },
+      { consoles: 'consoles' },
+      { games: 'games' },
     ],
   },
   {
-    id: "description",
-    type: "textarea",
-    label: "Descrição",
+    id: 'description',
+    type: 'textarea',
+    label: 'Descrição',
   },
 ];
 
@@ -50,9 +50,9 @@ function UserModal({ produto, fechar, sellerId }) {
     camposInput.reduce((acc, campo) => {
       return {
         ...acc,
-        [campo.id]: "",
+        [campo.id]: '',
       };
-    }, {})
+    }, {}),
   );
 
   const [erro, setErro] = React.useState(null);
@@ -66,14 +66,14 @@ function UserModal({ produto, fechar, sellerId }) {
 
   function handleClick({ target }) {
     switch (target.innerText) {
-      case "Enviar":
+      case 'Enviar':
         if (
-          form.name !== "" &&
-          form.price !== "" &&
-          form.image !== "" &&
-          form.description !== "" &&
-          form.credit !== "" &&
-          form.tag !== ""
+          form.name !== '' &&
+          form.price !== '' &&
+          form.image !== '' &&
+          form.description !== '' &&
+          form.credit !== '' &&
+          form.tag !== ''
         ) {
           setModalBlock(!modalBlock);
           const fetchApi = async (url, obj) => {
@@ -82,7 +82,7 @@ function UserModal({ produto, fechar, sellerId }) {
               const { status } = await axios.put(url, obj);
               setStatusPUT(status);
             } catch (erro) {
-              setErro("Erro");
+              setErro('Erro');
               console.log(erro);
             } finally {
               setLoading(false);
@@ -93,13 +93,13 @@ function UserModal({ produto, fechar, sellerId }) {
           };
 
           fetchApi(
-            `https://fake-server-company.herokuapp.com/products/update/${produto.id}`,
-            form
+            `https://server-techstore.onrender.com/products/update/${produto.id}`,
+            form,
           );
         }
         break;
 
-      case "Excluir":
+      case 'Excluir':
         setLoading(true);
 
         const fetchApi = async (url) => {
@@ -108,7 +108,7 @@ function UserModal({ produto, fechar, sellerId }) {
             setStatusDELETE(status);
             console.log(status);
           } catch (erro) {
-            setErro("Erro");
+            setErro('Erro');
             console.log(erro);
           } finally {
             setLoading(false);
@@ -120,17 +120,17 @@ function UserModal({ produto, fechar, sellerId }) {
         };
 
         fetchApi(
-          `https://fake-server-company.herokuapp.com/products/delete/${produto.id}`
+          `https://server-techstore.onrender.com/products/delete/${produto.id}`,
         );
         break;
-      case "Cadastrar":
+      case 'Cadastrar':
         if (
-          form.name !== "" &&
-          form.price !== "" &&
-          form.image !== "" &&
-          form.description !== "" &&
-          form.credit !== "" &&
-          form.tag !== ""
+          form.name !== '' &&
+          form.price !== '' &&
+          form.image !== '' &&
+          form.description !== '' &&
+          form.credit !== '' &&
+          form.tag !== ''
         ) {
           setModalBlock(!modalBlock);
           const fetchApi = async (url, obj) => {
@@ -140,7 +140,7 @@ function UserModal({ produto, fechar, sellerId }) {
               setStatusPOST(status);
               console.log(status);
             } catch (erro) {
-              setErro("Erro");
+              setErro('Erro');
               console.log(erro);
             } finally {
               setLoading(false);
@@ -151,8 +151,8 @@ function UserModal({ produto, fechar, sellerId }) {
           };
 
           fetchApi(
-            `https://fake-server-company.herokuapp.com/products/create`,
-            form
+            `https://server-techstore.onrender.com/products/create`,
+            form,
           );
         }
         break;
@@ -199,11 +199,11 @@ function UserModal({ produto, fechar, sellerId }) {
           <form className={styles.form}>
             {camposInput.map((campo) => {
               switch (campo.type) {
-                case "text":
+                case 'text':
                   return (
                     <div
                       key={campo.id}
-                      id={campo.id + "Div"}
+                      id={campo.id + 'Div'}
                       className={styles.inputsContainer}
                     >
                       <label htmlFor={campo.id}>{campo.label}</label>
@@ -215,7 +215,7 @@ function UserModal({ produto, fechar, sellerId }) {
                           value={form[campo.id]}
                           onChange={handleChange}
                         />
-                        {campo.id === "image" && (
+                        {campo.id === 'image' && (
                           <ButtonSecondarySmall
                             text="Carregar"
                             onClick={handleLoadImage}
@@ -224,7 +224,7 @@ function UserModal({ produto, fechar, sellerId }) {
                       </div>
                     </div>
                   );
-                case "radio":
+                case 'radio':
                   return (
                     <div key={campo.id}>
                       <p className={styles.pLabel}>{campo.titulo}</p>
@@ -248,7 +248,7 @@ function UserModal({ produto, fechar, sellerId }) {
                       })}
                     </div>
                   );
-                case "textarea":
+                case 'textarea':
                   return (
                     <div key={campo.id} className={styles.inputsContainer}>
                       <label htmlFor={campo.id}>{campo.label}</label>
@@ -279,7 +279,7 @@ function UserModal({ produto, fechar, sellerId }) {
           )}
           <div className={styles.btns}>
             <ButtonPrimarySmall
-              text={produto ? "Enviar" : "Cadastrar"}
+              text={produto ? 'Enviar' : 'Cadastrar'}
               onClick={handleClick}
             />
             <div className={styles.btnsEC}>

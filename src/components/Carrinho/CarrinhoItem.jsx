@@ -27,10 +27,15 @@ function CarrinhoItem({ id, qtd }) {
       }
     };
 
-    fetchApi(`https://fake-server-company.herokuapp.com/products/get/${id}`);
+    fetchApi(`https://server-techstore.onrender.com/products/get/${id}`);
   }, []);
 
-  if (loading) return <div style={{display: 'grid', placeItems: 'center', padding: '24px'}}><LoadingSmall /></div> ;
+  if (loading)
+    return (
+      <div style={{ display: 'grid', placeItems: 'center', padding: '24px' }}>
+        <LoadingSmall />
+      </div>
+    );
   if (erro) return <p>{erro}</p>;
   if (produto)
     return (

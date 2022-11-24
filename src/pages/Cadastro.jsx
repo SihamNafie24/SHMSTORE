@@ -42,7 +42,7 @@ function Cadastro() {
     }
 
     const response = await fetchApi(
-      `https://fake-server-company.herokuapp.com/sellers?email=${value}`,
+      `https://server-techstore.onrender.com/sellers?email=${value}`,
     );
 
     setLoading(false);
@@ -66,7 +66,7 @@ function Cadastro() {
             }
           };
 
-          fetchApi('https://fake-server-company.herokuapp.com/sellers/create', {
+          fetchApi('https://server-techstore.onrender.com/sellers/create', {
             name: nome.value,
             email: email.value,
             password: senha.value,
