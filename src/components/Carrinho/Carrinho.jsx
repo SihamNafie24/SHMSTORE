@@ -5,6 +5,7 @@ import { GlobalContext } from '../../context/GlobalContext';
 import CarrinhoItem from './CarrinhoItem';
 import closeIcon from '../../img/icons/close-icon.svg';
 
+
 function Carrinho() {
   const { produtosCarrinho, setShowCarrinho, showCarrinho } =
     React.useContext(GlobalContext);
