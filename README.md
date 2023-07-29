@@ -17,7 +17,7 @@
 <p align="center">Projeto de desenvolvimento de um website de um ecommerce onde comerciante pode criar, atualizar e deletar produtos.</p>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/100978478/203310202-0230d7da-502a-4022-a320-69d6e0830606.png" alt="Shoes logo">
+  <img src="https://i.imgur.com/UBEAiEJ.png" alt="Tech Store">
 </p>
 
 <h4 align="center"> Tech Store | Projeto entregue ✅</h4>
@@ -43,14 +43,29 @@ O layout da aplicação está disponível no Figma:
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img src="https://i.imgur.com/mlq9o9a.png" width="100%" height="100%" alt="imagem do layout do website">
 </p>
+</br>
 
 <h2>📌 Funcionalidades</h2>
-- Cadastrar produtos (imagem, preço, descrição)
-- Atualizar informações do produto (imagem, preço, descrição)
-- Deletar produto
-- Cadastro de usuário vendedor
-- Login de usuário vendedor
-- Adicionar, atualizar e retirar produtos do carrinho
+<ul>
+  <li>
+    Cadastrar produtos (imagem, preço, descrição)
+  </li>
+  <li>
+    Atualizar informações do produto (imagem, preço, descrição)   
+  </li>
+  <li>
+    Deletar produto   
+  </li>
+  <li>
+    Cadastro de usuário vendedor 
+  </li>
+  <li>
+    Login de usuário vendedor 
+  </li>
+  <li>
+    Adicionar, atualizar e retirar produtos do carrinho
+  </li>
+</ul>
 
 
 <br />
