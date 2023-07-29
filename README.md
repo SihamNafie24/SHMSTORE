@@ -131,7 +131,7 @@ Para acessar a demonstração do projeto
   </li>
 </ul>
 
-
+</br>
 <h2 id="license">📝 Licença</h2>
 
-Distribuído sob a licença MIT. Veja a [LICENSE](https://github.com/marcelo-souto/shoes-website/blob/main/LICENSE) para mais informações.
+Distribuído sob a licença MIT. Veja a [LICENSE](https://github.com/marcelo-souto/projeto-techstore/blob/main/LICENSE) para mais informações.
