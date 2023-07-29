@@ -92,32 +92,22 @@ Para acesaar a demonstração do projeto
 
 <h2 id="author">🦸 Autores</h2>
 
-<a href="https://www.linkedin.com/in/marcelosoutodev">
-  <img src="https://github.com/marcelo-souto/projeto-techstore/assets/100978478/2e5dfc6a-addd-44d6-9c8c-f8a1b2822efd" width="100px" />
-</a>
+<ul>
+  <li>
+    <a href="https://www.linkedin.com/in/marcelosoutodev/">Marcelo Souto</a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/matheus-valviesse-11583a24">Matheus Valviesse</a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/milenadonascimentodesouza/">Milena Nascimento</a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/yasmin-cristiny-a473291bb/">Yasmin Cristiny</a>
+  </li>
+</ul>
 
-<img src="https://github.com/marcelo-souto/projeto-techstore/assets/100978478/3a5dc800-7d9f-4675-bc64-1a2c93829d0f" width="100px" />
-<img src="https://github.com/marcelo-souto/projeto-techstore/assets/100978478/2c42936b-0055-428f-9461-05fb395599dc" width="100px" />
-<img src="https://github.com/marcelo-souto/projeto-techstore/assets/100978478/8683edf2-f3f0-427a-93c0-8cd3dfe505a7" width="100px" />
 
-  
- <br />
- <sub><b>Marcelo Souto</b></sub></a>
- <br />
- <br />
-
-[![Linkedin Badge](https://img.shields.io/badge/-Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white&link=[<seu_linkedin>](https://www.linkedin.com/in/marcelosoutodev/))](https://www.linkedin.com/in/marcelosoutodev/)
-[![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:marcelosouto.dev@gmail.com)](mailto:marcelosouto.dev@gmail.com)
-
-<br/>
-
-<!-- License -->
-<!-- Crie a licença quando inciar seu projeto. -->
 <h2 id="license">📝 Licença</h2>
 
 Distribuído sob a licença MIT. Veja a [LICENSE](https://github.com/marcelo-souto/shoes-website/blob/main/LICENSE) para mais informações.
-
-Feito com ❤️ por Marcelo Souto 👋🏽 [Entre em contato!](https://www.linkedin.com/in/marcelosoutodev/)
-
-<!-- Back to top -->
-[⬆ Voltar ao topo](#project_name)<br />
