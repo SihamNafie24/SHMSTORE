@@ -92,8 +92,14 @@ Para acesaar a demonstração do projeto
 
 <h2 id="author">🦸 Autores</h2>
 
-<a href="#">
- <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/100978478?s=400&u=7fa14dbaa8f6206043832a5b14292b88aea0f248&v=4" width="100px;" alt="<seu_nome>"/>
+<a href="https://www.linkedin.com/in/marcelosoutodev">
+  <img src="https://github.com/marcelo-souto/projeto-techstore/assets/100978478/2e5dfc6a-addd-44d6-9c8c-f8a1b2822efd" width="100px" />
+</a>
+
+<img src="https://github.com/marcelo-souto/projeto-techstore/assets/100978478/3a5dc800-7d9f-4675-bc64-1a2c93829d0f" width="100px" />
+<img src="https://github.com/marcelo-souto/projeto-techstore/assets/100978478/2c42936b-0055-428f-9461-05fb395599dc" width="100px" />
+<img src="https://github.com/marcelo-souto/projeto-techstore/assets/100978478/8683edf2-f3f0-427a-93c0-8cd3dfe505a7" width="100px" />
+
   
  <br />
  <sub><b>Marcelo Souto</b></sub></a>
