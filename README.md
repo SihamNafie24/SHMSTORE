@@ -109,7 +109,7 @@ $ npm run dev
 <br/>
 <h2 id="demo">🧪 Demo</h2>
 
-Para acesaar a demonstração do projeto 
+Para acessar a demonstração do projeto 
 <a href="https://projeto-techstore.vercel.app/">clique aqui</a>
 
 <br/>
