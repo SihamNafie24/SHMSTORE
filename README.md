@@ -44,6 +44,15 @@ O layout da aplicação está disponível no Figma:
   <img src="https://i.imgur.com/mlq9o9a.png" width="100%" height="100%" alt="imagem do layout do website">
 </p>
 
+<h2>📌 Funcionalidades</h2>
+- Cadastrar produtos (imagem, preço, descrição)
+- Atualizar informações do produto (imagem, preço, descrição)
+- Deletar produto
+- Cadastro de usuário vendedor
+- Login de usuário vendedor
+- Adicionar, atualizar e retirar produtos do carrinho
+
+
 <br />
 <h2 id="technologies">🛠 Tecnologias</h2>
 
