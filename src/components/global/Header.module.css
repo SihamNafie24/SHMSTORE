@@ -1,5 +1,5 @@
 .headerBackground {
-  background-color: #02181D;
+  background: linear-gradient(90deg, #0a2342 0%, #122e5c 100%);
   margin-bottom: 60px;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .nome {
-  color: #00FF7A;
+  color: #38bdf8;
   font-weight: 500;
 }
 
@@ -54,4 +54,32 @@
   .logo {
     width: 100px;
   }
+}
+
+.navLinks {
+  display: flex;
+  gap: 16px;
+}
+
+.navLink {
+  color: #eaf6fb;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 8px 18px;
+  border-radius: 8px;
+  background: transparent;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  position: relative;
+}
+
+.navLink:hover {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+}
+
+.activeNavLink {
+  background: linear-gradient(90deg, #38bdf8 0%, #0ea5e9 100%);
+  color: #0a2342;
+  box-shadow: 0 2px 8px 0 rgba(56, 189, 248, 0.15);
 }

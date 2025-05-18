@@ -8,8 +8,8 @@ function NaoEncontrada() {
     <div className="container comeFromBottom">
       <div className={styles.mensagem}>
         <img src={img} alt="macaco surtando sem acesso a uma página" />
-        <p>Ooops! página não encontrada :(</p>
-        <Link className={styles.link} to=''>Voltar para a página inicial</Link>
+        <p>Ooops! Page not found :(</p>
+        <Link className={styles.link} to=''>Back to home page</Link>
       </div>
     </div>
   );

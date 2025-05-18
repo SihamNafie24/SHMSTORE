@@ -63,32 +63,32 @@ function ProdutoDisplay({
       <div className={styles.info}>
         <div>
           <p className={styles.vendedor}>
-            Vendido e entregue por{' '}
+            Sold and delivered by{' '}
             <span style={{ fontWeight: 'bold' }}>{seller.name}</span>
           </p>
           <h1 className={styles.nome}>{name}</h1>
         </div>
         <div className={styles.precoContainer}>
           <div>
-            <del>{'R$ ' + (price * 1.05).toFixed(2)}</del>
-            <p className={styles.preco}>R$ {price}</p>
+            <del>{'$' + (price * 1.05).toFixed(2)}</del>
+            <p className={styles.preco}>$ {price}</p>
             {calculateCredit(price, credit)}
           </div>
           <div className={styles.buttons}>
-            <ButtonPrimary onClick={() => handleClick(id, price)} text="Comprar" />
-            <ButtonSecondary text="Retirar na loja" />
+            <ButtonPrimary onClick={() => handleClick(id, price)} text="Buy" />
+            <ButtonSecondary text="Pick up in store" />
           </div>
         </div>
         <div className={styles.cepContainer}>
           <form onSubmit={handleSubmit} className={styles.cep}>
-            <label style={{whiteSpace: 'noWrap', display: 'flex', alignItems: 'center'}} htmlFor="cep">Digite seu CEP:</label>
+            <label style={{whiteSpace: 'noWrap', display: 'flex', alignItems: 'center'}} htmlFor="cep">Enter your ZIP code:</label>
             <Input
               placeholder="00000-000"
               id="cep"
               onChange={handleChange}
               value={cep}
             />
-            <ButtonSecondary text={loading ? 'carregando' : "consultar"} disabled={loading ? true : false}/>
+            <ButtonSecondary text={loading ? 'loading' : "search"} disabled={loading ? true : false}/>
           </form>
           {data && data.logradouro && (
             <div className={styles.cepResponse}>

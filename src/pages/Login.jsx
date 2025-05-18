@@ -56,25 +56,25 @@ function Login() {
         <h1 className={styles.titulo}>Login</h1>
         <form className={styles.formulario} onSubmit={handleSubmit}>
           <Input
-            label="Email:"
+            label="Username or Email:"
             id="email"
-            placeholder="usuario@email.com"
+            placeholder="username or email"
             value={email.value}
             {...email}
           />
-          <Input label="Senha:" type="password" id="password" {...senha} />
+          <Input label="Password:" type="password" id="password" {...senha} />
           <div>
-            Não tem conta?{' '}
+            Don't have an account?{' '}
             <Link className={styles.link} to="cadastro">
-              Cadastre-se
+              Sign up
             </Link>{' '}
           </div>
           <ButtonPrimary
-            text={loading ? 'carregando...' : 'entrar'}
+            text={loading ? 'loading...' : 'login'}
             disabled={loading ? true : false}
           />
           {naoEncontrado && (
-            <div className={styles.mensagemErro}>Usuário não encontrado 😥</div>
+            <div className={styles.mensagemErro}>User not found 😥</div>
           )}
         </form>
       </div>

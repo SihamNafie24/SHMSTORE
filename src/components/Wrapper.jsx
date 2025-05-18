@@ -24,7 +24,7 @@ function Wrapper({ text, info }) {
   return (
     <div className={`${styles.container} comeFromBottom`}>
       <button onClick={handleClick} className={styles.head}>
-        {text}
+        {text === 'Descrição' ? 'Description' : text}
         <img
           className={`${ativo ? 'rotate' : ''}`}
           src={arrow}

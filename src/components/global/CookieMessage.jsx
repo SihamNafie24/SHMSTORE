@@ -25,12 +25,11 @@ function CookieMessage() {
     <aside className={`${styles.container} comeFromBottom`}>
       <div className={styles.content}>
         <p>
-          Ao clicar em "Aceitar todos os cookies", você concorda com o
-          armazenamento de cookies no seu dispositivo.
+          By clicking "Accept all cookies", you agree to the storage of cookies on your device.
         </p>
         <div className={styles.btnsContainer}>
-          <ButtonPrimary onClick={handleClick} text="Aceitar" />
-          <ButtonSecondary onClick={handleClick} text="Recusar" />
+          <ButtonPrimary onClick={handleClick} text="Accept" />
+          <ButtonSecondary onClick={handleClick} text="Reject" />
         </div>
       </div>
     </aside>

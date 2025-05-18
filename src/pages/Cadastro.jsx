@@ -88,13 +88,13 @@ function Cadastro() {
     if (status) {
       switch (status) {
         case 201:
-          setMessage('Cadastrado com sucesso.');
+          setMessage('Registered successfully.');
           break;
         case 1:
-          setMessage('Oops, esse email já está sendo utilizado.');
+          setMessage('Oops, this email is already in use.');
           break;
         default:
-          setMessage('Parece que tivemos algum problema. Tente novamente.');
+          setMessage('It looks like we had a problem. Please try again.');
           break;
       }
     }
@@ -115,10 +115,10 @@ function Cadastro() {
   return (
     <section>
       <div className={`${styles.container} comeFromBottom`}>
-        <Head title="Cadastre-se" />
-        <h1 className={styles.titulo}>Cadastre-se</h1>
+        <Head title="Register" />
+        <h1 className={styles.titulo}>Register</h1>
         <form className={styles.formulario} onSubmit={handleSubmit}>
-          <Input label="Nome:" id="name" {...nome} value={nome.value} />
+          <Input label="Name:" id="name" {...nome} value={nome.value} />
           <Input
             label="Email:"
             id="email"
@@ -127,14 +127,14 @@ function Cadastro() {
             value={email.value}
           />
           <Input
-            label="Senha:"
+            label="Password:"
             type="password"
             id="password"
             {...senha}
             value={senha.value}
           />
           <ButtonPrimary
-            text={loading ? 'carregando...' : 'enviar'}
+            text={loading ? 'loading...' : 'send'}
             disabled={loading ? true : false}
           />
         </form>

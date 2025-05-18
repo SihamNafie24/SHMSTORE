@@ -31,9 +31,15 @@ function Header() {
     <header className={styles.headerBackground}>
       <div className={`${styles.header} container`}>
         <Link to="">
-          <img className={styles.logo} src={logo} alt="techstore" />
+          <span style={{ color: '#00FF7A', fontWeight: 700, fontSize: '2.5rem', textTransform: 'uppercase', letterSpacing: '2px' }}>SHMSTORE</span>
         </Link>
-        <nav>
+        <nav style={{alignItems: 'center', display: 'flex', gap: '24px'}}>
+          <div className={styles.navLinks}>
+            <Link to="/" className={`${styles.navLink} ${location.pathname === '/' ? styles.activeNavLink : ''}`}>Home</Link>
+            <Link to="/login" className={`${styles.navLink} ${location.pathname.startsWith('/login') ? styles.activeNavLink : ''}`}>Login</Link>
+            <Link to="/login/cadastro" className={`${styles.navLink} ${location.pathname.startsWith('/login/cadastro') ? styles.activeNavLink : ''}`}>Register</Link>
+            <Link to="/quemsomos" className={`${styles.navLink} ${location.pathname.startsWith('/quemsomos') ? styles.activeNavLink : ''}`}>About us</Link>
+          </div>
           <button className={styles.user} onClick={() => navigate('login')}>
             <img src={userIcon} alt="icone de usuario" />
             {user && (

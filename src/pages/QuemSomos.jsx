@@ -15,16 +15,16 @@ function QuemSomos() {
       <Head title='Quem Somos'/>
       <div className={`${styles.secao1} container`}>
         <div>
-          <h2 className={styles.titulo}>quem somos</h2>
+          <h2 className={styles.titulo}>About us</h2>
           <p className={styles.content}>
-            somos uma loja de produtos eletrônicos, voltada principalmente ao
-            público gamer
+            We are a store of electronic products, mainly focused on the gamer audience.<br/>
+            Our mission is to deliver high-performance gear and cutting-edge technology that enhance every gamer's experience, from casual players to competitive enthusiasts.
           </p>
         </div>
         <img
           src={sobreImg}
           className='comeFromRight'
-          alt="imagem de um homem jogando e um controle de xbox"
+          alt="image of a man playing and an xbox controller"
         />
       </div>
 
@@ -33,36 +33,16 @@ function QuemSomos() {
           <img
             className='comeFromLeft'
             src={sobreImg2}
-            alt="jovem jogando com um oculos de realidade virtual"
+            alt="young man playing with a virtual reality headset"
           />
           <div>
-            <h2 className={styles.titulo}>nossos objetivos</h2>
+            <h2 className={styles.titulo}>Our goals</h2>
             <ul className={`${styles.lista} ${styles.content}`}>
-              <li>ser o ecommerce referência de tecnologia no mercado.</li>
-              <li>
-                ser a maior marca representativa do cenário e-sports brasileiro.
-              </li>
-              <li>
-                mudar o acesso a tecnologia com inclusão, sustentabilidade e
-                preços baixos.
-              </li>
+              <li>Become the leading e-commerce platform for technology in the market.</li>
+              <li>Establish ourselves as the most recognized brand in the Moroccan e-sports scene.</li>
+              <li>Revolutionize access to technology through inclusion, sustainability, and affordable pricing.</li>
             </ul>
           </div>
-        </div>
-      </div>
-
-      <div className={`${styles.secao3} container`}>
-        <div>
-          <h2 className={styles.titulo}>nossa equipe</h2>
-        </div>
-        <div className={styles.equipe}>
-          <img src={marcelo} alt="Marcelo Souto" />
-
-          <img src={matheus} alt="Matheus Valviessi" />
-
-          <img src={milena} alt="Milena Nascimento" />
-
-          <img src={yasmin} alt="Yasmin Cristiny" />
         </div>
       </div>
     </section>

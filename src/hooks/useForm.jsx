@@ -4,12 +4,12 @@ const types = {
   email: {
     regex:
       /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
-    message: 'Digite um email válido.',
+    message: 'Enter a valid email.',
   },
   cpf: {
     regex:
       /([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/i,
-    message: 'Digite um CPF válido.',
+    message: 'Enter a valid CPF.',
   },
 };
 
@@ -21,12 +21,12 @@ function useForm(type) {
     if (type === false) return true;
 
     if (value.length === 0) {
-      setErro('Preencha um valor.');
+      setErro('Please fill in a value.');
       return false;
     } else if (/min/.test(type)) {
       const minimo = Number(type.replace('min=', ''));
       if (value.length < minimo) {
-        setErro(`Digite pelo menos ${minimo} caracteres.`);
+        setErro(`Enter at least ${minimo} characters.`);
         return false;
       } else {
         setErro(null);

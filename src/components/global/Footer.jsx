@@ -10,30 +10,33 @@ function Footer() {
       <div className={styles.footerLogo}>
         <div className="container">
           <Link to="">
-            <img className={styles.logo} src={logo} alt="tech store" />
+            <span style={{ color: '#00FF7A', fontWeight: 700, fontSize: '2.5rem', textTransform: 'uppercase', letterSpacing: '2px' }}>SHMSTORE</span>
           </Link>
         </div>
       </div>
       <div className={`container ${styles.footer}`}>
         <div>
-          <h2 className={styles.secoes}>Contato</h2>
+          <h2 className={styles.secoes}>Contact</h2>
           <ul>
             <li>
-              <a href="tel:+5521999999999">21 99999-9999</a>
+              <strong>Location:</strong> Casablanca - Morocco
             </li>
             <li>
-              <a href="mailto:atendimento@techstore.com">
-                atendimento@techstore.com
-              </a>
+              <strong>Email:</strong> <a href="mailto:nafiesiham36@gmail.com">nafiesiham36@gmail.com</a>
+            </li>
+            <li>
+              <strong>Phone:</strong> <a href="tel:+212643552164">+212 643-552164</a>
+            </li>
+            <li>
+              <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/siham-nafie" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/siham-nafie</a>
+            </li>
+            <li>
+              <strong>GitHub:</strong> <a href="https://github.com/SihamNafie24" target="_blank" rel="noopener noreferrer">https://github.com/SihamNafie24</a>
             </li>
           </ul>
-          <address>
-            <p>Rua Coronel Agostinho, 256</p>
-            <p>Rio de Janeiro - RJ</p>
-          </address>
         </div>
         <div>
-          <h2 className={styles.secoes}>Informações</h2>
+          <h2 className={styles.secoes}>Information</h2>
           <ul>
             <li>
               <Link to="">Home</Link>
@@ -42,10 +45,10 @@ function Footer() {
               <Link to="login">Login</Link>
             </li>
             <li>
-              <Link to="login/cadastro">Cadastro</Link>
+              <Link to="login/cadastro">Register</Link>
             </li>
             <li>
-              <Link to="quemsomos">Quem somos</Link>
+              <Link to="quemsomos">About us</Link>
             </li>
           </ul>
         </div>

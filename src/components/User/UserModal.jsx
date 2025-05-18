@@ -9,31 +9,31 @@ import imgLoad from '../../img/icons/photo-icon.svg';
 const camposInput = [
   {
     id: 'name',
-    label: 'Nome',
+    label: 'Name',
     type: 'text',
   },
   {
     id: 'price',
-    label: 'Preço',
+    label: 'Price',
     type: 'text',
   },
   {
     id: 'image',
-    label: 'Imagem',
+    label: 'Image',
     type: 'text',
   },
   {
     id: 'credit',
-    titulo: 'Parcelamento',
+    titulo: 'Installments',
     type: 'radio',
-    options: [{ sim: true }, { não: false }],
+    options: [{ yes: true }, { no: false }],
   },
   {
     id: 'tag',
     titulo: 'Tag',
     type: 'radio',
     options: [
-      { acessórios: 'acessórios' },
+      { accessories: 'accessories' },
       { consoles: 'consoles' },
       { games: 'games' },
     ],
@@ -41,7 +41,7 @@ const camposInput = [
   {
     id: 'description',
     type: 'textarea',
-    label: 'Descrição',
+    label: 'Description',
   },
 ];
 
@@ -264,29 +264,29 @@ function UserModal({ produto, fechar, sellerId }) {
             })}
           </form>
           {statusPUT && statusPUT === 200 && (
-            <p className={styles.message}>Produto alterado com sucesso.</p>
+            <p className={styles.message}>Product updated successfully.</p>
           )}
           {statusDELETE && statusDELETE === 200 && (
-            <p className={styles.message}>Produto excluido com sucesso.</p>
+            <p className={styles.message}>Product deleted successfully.</p>
           )}
           {statusPOST && statusPOST !== 201 && (
-            <p className={styles.message}>Produto criado com sucesso.</p>
+            <p className={styles.message}>Product created successfully.</p>
           )}
 
-          {loading && <p className={styles.message}>Carregando...</p>}
+          {loading && <p className={styles.message}>Loading...</p>}
           {statusPOST && statusPOST === 201 && (
-            <p className={styles.message}>Produto criado com sucesso.</p>
+            <p className={styles.message}>Product created successfully.</p>
           )}
           <div className={styles.btns}>
             <ButtonPrimarySmall
-              text={produto ? 'Enviar' : 'Cadastrar'}
+              text={produto ? 'Send' : 'Register'}
               onClick={handleClick}
             />
             <div className={styles.btnsEC}>
               {produto && (
-                <ButtonPrimarySmall text="Excluir" onClick={handleClick} />
+                <ButtonPrimarySmall text="Delete" onClick={handleClick} />
               )}
-              <ButtonSecondarySmall text="Cancelar" onClick={fechar} />
+              <ButtonSecondarySmall text="Cancel" onClick={fechar} />
             </div>
           </div>
         </div>

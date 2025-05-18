@@ -13,27 +13,27 @@ function UserProduct({ name, price, image, description, credit, id, onClick }) {
         <div className={styles.info}>
           <p className={styles.id}>Id: {id}</p>
           <div>
-            <p>Nome</p>
+            <p>Name</p>
             <p className={styles.titulo}>{name}</p>
           </div>
 
           <div>
-            <p>Preço</p>
-            <p className={styles.preco}>R$ {price}</p>
+            <p>Price</p>
+            <p className={styles.preco}>$ {price}</p>
           </div>
 
           <div>
-            <p>Parcelamento</p>
-            <p className={styles.bool}>{credit == 'true' ? 'Sim' : 'Não'}</p>
+            <p>Installments</p>
+            <p className={styles.bool}>{credit == 'true' ? 'Yes' : 'No'}</p>
           </div>
 
           <div>
-            <p>Descrição</p>
+            <p>Description</p>
             <p className={styles.desc}>{description}</p>
           </div>
 
           <div>
-            <ButtonPrimary text="Editar" onClick={() => onClick(id)} />
+            <ButtonPrimary text="Edit" onClick={() => onClick(id)} />
           </div>
         </div>
       </div>

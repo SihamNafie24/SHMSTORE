@@ -5,21 +5,25 @@
 }
 
 .input {
-  background-color: transparent;
+  background-color: rgba(20, 40, 60, 0.35);
   border: 2px solid #03282f;
   color: #F4F4F4;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 14px;
   outline: none;
   box-sizing: border-box;
-  transition: 0.3s;
+  transition: 0.3s, box-shadow 0.3s;
   width: 100%;
+  box-shadow: 0 2px 8px 0 rgba(56,189,248,0.10) inset, 0 1.5px 8px 0 rgba(0,255,122,0.08);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 .input:focus {
-  border-color: #05424f;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px #38bdf8, 0 2px 8px 0 rgba(56,189,248,0.18) inset;
 }
 
 .input::placeholder {

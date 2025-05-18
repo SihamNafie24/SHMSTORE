@@ -40,7 +40,7 @@ function Produto() {
     <section className="container">
       <Head title={produto.name} />
       <ProdutoDisplay handleClick={adicionarProduto} {...produto} />
-      <Wrapper text="Descrição" info={produto.description} />
+      <Wrapper text="Description" info={produto.description} />
     </section>
   );
 }

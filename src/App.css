@@ -6,8 +6,8 @@
 }
 
 body {
-  background-color: #051418;
-  color: #f4f4f4;
+  background: linear-gradient(135deg, #0a2342 0%, #122e5c 100%);
+  color: #eaf6fb;
 }
 
 body,
@@ -57,53 +57,53 @@ a {
 /* Animations */
 
 .comeFromLeft {
-  transform: translateX(-40px);
+  transform: translateX(-40px) scale(0.96);
   opacity: 0;
-  animation: comeFromLeft 0.3s forwards;
+  animation: comeFromLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 @keyframes comeFromLeft {
   to {
-    transform: initial;
-    opacity: initial;
+    transform: translateX(0) scale(1);
+    opacity: 1;
   }
 }
 
 .comeFromRight {
-  transform: translateX(40px);
+  transform: translateX(40px) scale(0.96);
   opacity: 0;
-  animation: comeFromRight 0.3s forwards;
+  animation: comeFromRight 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 @keyframes comeFromRight {
   to {
-    transform: initial;
-    opacity: initial;
+    transform: translateX(0) scale(1);
+    opacity: 1;
   }
 }
 
 .comeFromBottom {
-  transform: translateY(40px);
+  transform: translateY(40px) scale(0.96);
   opacity: 0;
-  animation: comeFromBottom 0.3s forwards;
+  animation: comeFromBottom 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 @keyframes comeFromBottom {
   to {
-    transform: initial;
-    opacity: initial;
+    transform: translateY(0) scale(1);
+    opacity: 1;
   }
 }
 
 .comeFromTop {
-  transform: translateY(-40px);
+  transform: translateY(-40px) scale(0.96);
   opacity: 0;
-  animation: comeFromTop 0.3s forwards;
+  animation: comeFromTop 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 @keyframes comeFromTop {
   to {
-    transform: initial;
-    opacity: initial;
+    transform: translateY(0) scale(1);
+    opacity: 1;
   }
 }

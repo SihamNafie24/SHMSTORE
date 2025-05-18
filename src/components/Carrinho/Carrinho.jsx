@@ -62,7 +62,7 @@ function Carrinho() {
             </div>
           </div>
         </div>
-      ) : <div className={styles.mensagemVazio}>Seu carrinho ainda está vazio :(</div>}
+      ) : <div className={styles.mensagemVazio}>Your cart is still empty :(</div>}
     </aside>
   );
 }

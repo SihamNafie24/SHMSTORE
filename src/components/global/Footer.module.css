@@ -1,5 +1,5 @@
 .footerBg {
-  background-color: #02181D;
+  background: linear-gradient(90deg, #0a2342 0%, #122e5c 100%);
   margin-top: 60px;
 }
 
@@ -36,8 +36,7 @@
 }
 
 .secoes {
-  text-transform: uppercase;
-  color: #00FF7A;
+  color: #38bdf8;
   margin-bottom: 32px;
   letter-spacing: .15rem;
 }
