@@ -39,4 +39,8 @@ Visit: [http://localhost:5173](http://localhost:5173)
 
 ## 📝 License
 
+<<<<<<< HEAD
 Based on [Tech Store](https://github.com/marcelo-souto/projeto-techstore) – MIT License.
+=======
+Based on [Tech Store](https://github.com/marcelo-souto/projeto-techstore) – MIT License.
+>>>>>>> 09bc1e5186060973e6b8329982b0bad6c5658d0d
