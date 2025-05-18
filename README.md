@@ -1,4 +1,42 @@
-SHMSTORE is a modern, responsive e-commerce web application focused on electronic products and gaming gear.
-Built with React and Vite, it features a sleek UI, dynamic product catalog, user authentication, shopping cart, and a fully responsive design.
-SHMSTORE aims to deliver a seamless shopping experience for tech enthusiasts, offering high-performance products, easy navigation, and secure checkout.
-The project leverages Tailwind CSS for rapid styling and includes modern animations and accessibility best practices.
+# 🛍️ SHMSTORE
+
+**SHMSTORE** is a modern e-commerce web application focused on tech and gaming products. Built with **React**, **Vite**, and **Tailwind CSS**, it offers a sleek, responsive, and user-friendly experience for both customers and sellers.
+
+## 🚀 Features
+
+- Browse tech and gaming products
+- Product details (image, price, description)
+- Add, update, delete products (for sellers)
+- User registration and login
+- Shopping cart functionality
+- Responsive UI with modern design
+
+## 🛠️ Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+- Axios
+- Node.js *(if applicable)*
+- REST API
+
+## ▶️ Installation
+
+```bash
+git clone https://github.com/SihamNafie24/shmstore.git
+cd shmstore
+npm install
+npm run dev
+```
+
+Visit: [http://localhost:5173](http://localhost:5173)
+
+## 👩‍💻 Author
+
+**Siham Nafie**  
+🔗 [LinkedIn](https://linkedin.com/in/siham-nafie)  
+💻 [GitHub](https://github.com/SihamNafie24)
+
+## 📝 License
+
+Based on [Tech Store](https://github.com/marcelo-souto/projeto-techstore) – MIT License.
